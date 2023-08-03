@@ -1,5 +1,5 @@
 // ignore_for_file: unused_field
-
+import 'package:ariski_portfolio/service/color.dart';
 import 'package:ariski_portfolio/user/screens/service_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,25 +19,24 @@ class NavigationBarScreen extends StatefulWidget {
 class _NavigationBarScreenState extends State<NavigationBarScreen> {
   // method scroll
   void _scrollToSection(int index) {
-    final double sectionHeight =
-        600.0; // Adjust this value based on your content height
+    // ignore: prefer_const_declarations
+    final double sectionHeight = 800.0;
     _scrollController.animateTo(index * sectionHeight,
-        duration: Duration(milliseconds: 1500), curve: Curves.easeInOut);
+        duration: const Duration(milliseconds: 1500), curve: Curves.easeInOut);
   }
 
   // list string untuk teks navbar ketika diklik
   final List<String> _textPages = [
     'Home',
+    'Experience',
     'Work',
-    'Service',
   ];
 
   //list widget halaman
   final List<Widget> _pages = [
-    // Widgets for each section
-    HomeScreen(),
-    WorkScreen(),
-    ServiceScreen(),
+    const HomeScreen(),
+    const WorkScreen(),
+    const ServiceScreen(),
   ];
 
   //list int nyoba nyoba aja
@@ -54,7 +53,6 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
 
   bool _isHovered = false;
   bool _isHoveredText = false;
-
   int _currentIndex = 0;
 
   @override
@@ -72,54 +70,53 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             backgroundColor: Colors.black,
             leading: Padding(
               padding: const EdgeInsets.fromLTRB(85, 0, 0, 0),
-              child: Container(
-                child: Row(
-                  children: [
-                    Container(
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.fill,
-                            image: AssetImage('assets/images/logo.png')),
-                      ),
+              child: Row(
+                children: [
+                  Container(
+                    height: 45,
+                    width: 45,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: AssetImage('assets/images/logo.png')),
                     ),
-                    const SizedBox(
-                      width: 5.0,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        _scrollToSection(_pages.length = 3);
+                  ),
+                  const SizedBox(
+                    width: 7.0,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      _scrollToSection(0);
+                    },
+                    child: MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      onEnter: (_) {
+                        setState(() {
+                          _isHoveredText = true;
+                        });
                       },
-                      child: MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        onEnter: (_) {
-                          setState(() {
-                            _isHoveredText = true;
-                          });
-                        },
-                        onExit: (_) {
-                          setState(() {
-                            _isHoveredText = false;
-                          });
-                        },
-                        child: HoverWidget(
-                          onHover: (isHovered) {},
-                          child: Text(
-                            'ahmadriski',
-                            style: GoogleFonts.eduSaBeginner(
-                                textStyle: TextStyle(
-                              color:
-                                  _isHoveredText ? Colors.yellow : Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                            )),
-                          ),
+                      onExit: (_) {
+                        setState(() {
+                          _isHoveredText = false;
+                        });
+                      },
+                      child: HoverWidget(
+                        onHover: (isHovered) {},
+                        child: Text(
+                          'ahmadriski.',
+                          style: GoogleFonts.eduSaBeginner(
+                              textStyle: TextStyle(
+                            color: _isHoveredText
+                                ? ServiceColor.kPrimaryColor
+                                : Colors.white,
+                            fontSize: 27,
+                            fontWeight: FontWeight.bold,
+                          )),
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             title: Padding(
@@ -155,10 +152,10 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
                             child: AnimatedContainer(
-                              duration: Duration(milliseconds: 300),
+                              duration: const Duration(milliseconds: 300),
                               decoration: BoxDecoration(
                                 border: _currentIndex == index
-                                    ? Border(
+                                    ? const Border(
                                         bottom: BorderSide(
                                             width: 1.0, color: Colors.grey))
                                     : null,

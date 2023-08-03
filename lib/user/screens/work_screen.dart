@@ -11,7 +11,7 @@ class _WorkScreenState extends State<WorkScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 600,
+      height: 800,
       child: Center(
         child: Text(
           "Work Screen",

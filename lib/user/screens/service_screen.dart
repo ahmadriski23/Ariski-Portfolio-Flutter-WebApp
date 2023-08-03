@@ -11,7 +11,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 600,
+        height: 800,
         child: Center(
           child: Text(
             "Service Screen",
