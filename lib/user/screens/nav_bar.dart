@@ -1,4 +1,5 @@
 // ignore_for_file: unused_field
+import 'package:animate_do/animate_do.dart';
 import 'package:ariski_portfolio/service/color.dart';
 import 'package:ariski_portfolio/user/screens/service_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen.dart';
@@ -72,46 +73,52 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
               padding: const EdgeInsets.fromLTRB(85, 0, 0, 0),
               child: Row(
                 children: [
-                  Container(
-                    height: 45,
-                    width: 45,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage('assets/images/logo.png')),
+                  FadeIn(
+                    duration: Duration(milliseconds: 2500),
+                    child: Container(
+                      height: 45,
+                      width: 45,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/logo.png')),
+                      ),
                     ),
                   ),
                   const SizedBox(
                     width: 7.0,
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      _scrollToSection(0);
-                    },
-                    child: MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      onEnter: (_) {
-                        setState(() {
-                          _isHoveredText = true;
-                        });
+                  FadeIn(
+                    duration: Duration(milliseconds: 2500),
+                    child: GestureDetector(
+                      onTap: () {
+                        _scrollToSection(0);
                       },
-                      onExit: (_) {
-                        setState(() {
-                          _isHoveredText = false;
-                        });
-                      },
-                      child: HoverWidget(
-                        onHover: (isHovered) {},
-                        child: Text(
-                          'ahmadriski.',
-                          style: GoogleFonts.eduSaBeginner(
-                              textStyle: TextStyle(
-                            color: _isHoveredText
-                                ? ServiceColor.kPrimaryColor
-                                : Colors.white,
-                            fontSize: 27,
-                            fontWeight: FontWeight.bold,
-                          )),
+                      child: MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        onEnter: (_) {
+                          setState(() {
+                            _isHoveredText = true;
+                          });
+                        },
+                        onExit: (_) {
+                          setState(() {
+                            _isHoveredText = false;
+                          });
+                        },
+                        child: HoverWidget(
+                          onHover: (isHovered) {},
+                          child: Text(
+                            'ahmadriski.',
+                            style: GoogleFonts.eduSaBeginner(
+                                textStyle: TextStyle(
+                              color: _isHoveredText
+                                  ? ServiceColor.kPrimaryColor
+                                  : Colors.white,
+                              fontSize: 27,
+                              fontWeight: FontWeight.bold,
+                            )),
+                          ),
                         ),
                       ),
                     ),
@@ -127,51 +134,55 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                   scrollDirection: Axis.horizontal,
                   itemCount: _pages.length,
                   itemBuilder: (context, index) {
-                    return GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          _scrollToSection(index);
-                          _currentIndex = index;
-                        });
-                      },
-                      child: MouseRegion(
-                        cursor:
-                            SystemMouseCursors.grabbing, // Set the cursor shape
-                        onEnter: (_) {
+                    return FadeIn(
+                      duration: Duration(milliseconds: 2500),
+                      child: GestureDetector(
+                        onTap: () {
                           setState(() {
-                            _isHovered = true;
+                            _scrollToSection(index);
+                            _currentIndex = index;
                           });
                         },
-                        onExit: (_) {
-                          setState(() {
-                            _isHovered = false;
-                          });
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 27.0),
+                        child: MouseRegion(
+                          cursor: SystemMouseCursors
+                              .grabbing, // Set the cursor shape
+                          onEnter: (_) {
+                            setState(() {
+                              _isHovered = true;
+                            });
+                          },
+                          onExit: (_) {
+                            setState(() {
+                              _isHovered = false;
+                            });
+                          },
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
-                            child: AnimatedContainer(
-                              duration: const Duration(milliseconds: 300),
-                              decoration: BoxDecoration(
-                                border: _currentIndex == index
-                                    ? const Border(
-                                        bottom: BorderSide(
-                                            width: 1.0, color: Colors.grey))
-                                    : null,
-                              ),
-                              child: Text(
-                                _textPages[index],
-                                style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                    fontSize:
-                                        _currentIndex == index ? 14.0 : 14.0,
-                                    fontWeight: _currentIndex == index
-                                        ? FontWeight.bold
-                                        : FontWeight.normal,
-                                    color: _currentIndex == index
-                                        ? Colors.white
-                                        : Colors.grey,
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 27.0),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+                              child: AnimatedContainer(
+                                duration: const Duration(milliseconds: 300),
+                                decoration: BoxDecoration(
+                                  border: _currentIndex == index
+                                      ? const Border(
+                                          bottom: BorderSide(
+                                              width: 1.0, color: Colors.grey))
+                                      : null,
+                                ),
+                                child: Text(
+                                  _textPages[index],
+                                  style: GoogleFonts.poppins(
+                                    textStyle: TextStyle(
+                                      fontSize:
+                                          _currentIndex == index ? 14.0 : 14.0,
+                                      fontWeight: _currentIndex == index
+                                          ? FontWeight.bold
+                                          : FontWeight.normal,
+                                      color: _currentIndex == index
+                                          ? Colors.white
+                                          : Colors.grey,
+                                    ),
                                   ),
                                 ),
                               ),

@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^5.1.0
   marquee: ^2.2.3
+  animated_text_kit: ^4.2.2
+  animate_do: ^3.0.2
+  material_design_icons_flutter: ^7.0.7296
 
 dev_dependencies:
   flutter_test:
