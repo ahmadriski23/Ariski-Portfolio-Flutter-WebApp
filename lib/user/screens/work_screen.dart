@@ -86,7 +86,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                   ),
                                 ),
                               ),
-                              // Overlay teks saat hover guys ya guys
+                              // Overlay teks saat hover diarahkan
                               IgnorePointer(
                                   // Mencegah efek hover aktif ketika mouse berada di atas overlay
                                   ignoring: true,
