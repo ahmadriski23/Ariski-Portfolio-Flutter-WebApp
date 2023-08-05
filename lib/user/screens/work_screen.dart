@@ -1,7 +1,8 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/data/listPortfolio.dart';
+import 'package:ariski_portfolio/data/list_portfolio.dart';
 import 'package:ariski_portfolio/service/color.dart';
 import 'package:ariski_portfolio/service/text_style.dart';
+import 'package:ariski_portfolio/user/widgets/footer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -14,98 +15,118 @@ class WorkScreen extends StatefulWidget {
 }
 
 class _WorkScreenState extends State<WorkScreen> {
-  bool _isHovered = false;
+  List<bool> _isHovered = [];
+
+  @override
+  void initState() {
+    super.initState();
+    // hover gambar secara satu per satu
+    _isHovered = List.generate(listPortfolio().length, (index) => false);
+  }
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-        height: 800,
-        child: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Column(
-            children: [
-              // text featured project
-              FadeInDown(
-                duration: Duration(milliseconds: 1000),
+        height: 1200,
+        child: Column(
+          children: [
+            // text featured project
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: BounceInDown(
+                duration: const Duration(milliseconds: 5000),
                 child: Text("Featured Projects",
                     style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                         fontSize: 30.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     )),
               ),
-              const SizedBox(
-                height: 50.0,
-              ),
-              FadeInDown(
-                duration: Duration(milliseconds: 1000),
-                child: Container(
-                  height: 550,
-                  child: ListView.builder(
-                    itemCount: listPortfolio().length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      var appName = listPortfolio()[index].appName!;
-                      return Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: size.width,
-                          height: 550,
-                          child: Stack(
-                            children: [
-                              // Gambar dengan efek hover berwarna
-                              MouseRegion(
-                                cursor: SystemMouseCursors.grabbing,
-                                onEnter: (_) {
-                                  setState(() {
-                                    _isHovered = true;
-                                  });
-                                },
-                                onExit: (_) {
-                                  setState(() {
-                                    _isHovered = false;
-                                  });
-                                },
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(85, 0, 85, 0),
+            ),
+            const SizedBox(
+              height: 50.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: SizedBox(
+                height: 550,
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 15,
+                    childAspectRatio: 10 / 25,
+                  ),
+                  itemCount: listPortfolio().length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    var appName = listPortfolio()[index].appName!;
+                    return Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      child: Container(
+                        width: size.width,
+                        height: 550,
+                        child: Stack(
+                          children: [
+                            // Gambar dengan efek hover berwarna
+                            MouseRegion(
+                              cursor: SystemMouseCursors.grabbing,
+                              onEnter: (_) {
+                                setState(() {
+                                  _isHovered[index] = true;
+                                });
+                              },
+                              onExit: (_) {
+                                setState(() {
+                                  _isHovered[index] = false;
+                                });
+                              },
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(85, 0, 85, 0),
+                                child: FadeInDown(
+                                  duration: const Duration(milliseconds: 2500),
                                   child: Container(
                                     width: size.width,
                                     height: 550,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(25),
+                                      borderRadius: BorderRadius.circular(10),
                                       image: DecorationImage(
                                         fit: BoxFit.fill,
                                         image: AssetImage(
-                                            listPortfolio()[index].image!),
+                                          listPortfolio()[index].image!,
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                              // Overlay teks saat hover diarahkan
-                              IgnorePointer(
-                                  // Mencegah efek hover aktif ketika mouse berada di atas overlay
-                                  ignoring: true,
-                                  child: _isHovered
-                                      ? Padding(
-                                          padding: const EdgeInsets.fromLTRB(
-                                              85, 0, 85, 0),
+                            ),
+                            // Overlay teks saat hover diarahkan
+                            IgnorePointer(
+                                // Mencegah efek hover aktif ketika mouse berada di atas overlay
+                                ignoring: true,
+                                child: _isHovered[index]
+                                    ? Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 0, 85, 0),
+                                        child: FadeIn(
+                                          duration: const Duration(
+                                              milliseconds: 2000),
                                           child: Container(
                                             height: 550,
                                             width: size.width,
                                             decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(25),
+                                                  BorderRadius.circular(10),
                                               color: Colors.black
                                                   .withOpacity(0.85),
                                             ),
                                             child: Padding(
                                               padding:
-                                                  const EdgeInsets.all(35.0),
+                                                  const EdgeInsets.all(10.0),
                                               child: Column(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.start,
@@ -125,95 +146,103 @@ class _WorkScreenState extends State<WorkScreen> {
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold,
-                                                              fontSize: 35),
+                                                              fontSize: 20),
                                                     ),
                                                   ),
                                                   const SizedBox(
-                                                    height: 40.0,
+                                                    height: 12.0,
                                                   ),
+                                                  // ask what is project
                                                   Text(
                                                     'What is $appName ?',
                                                     style: ServiceText()
                                                         .poppinsStyle
                                                         .copyWith(
-                                                            fontSize: 23,
+                                                            fontSize: 15,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .w600),
                                                   ),
                                                   const SizedBox(
-                                                    height: 20.0,
+                                                    height: 12.0,
                                                   ),
+                                                  // description
                                                   Text(
                                                     listPortfolio()[index]
                                                         .description!,
                                                     style: ServiceText()
                                                         .poppinsStyle
                                                         .copyWith(
-                                                            fontSize: 19,
+                                                            fontSize: 11,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .w500),
                                                   ),
                                                   const SizedBox(
-                                                    height: 40.0,
+                                                    height: 15.0,
                                                   ),
+                                                  // title technologies
                                                   Text(
                                                     'Technologies',
                                                     style: ServiceText()
                                                         .poppinsStyle
                                                         .copyWith(
-                                                            fontSize: 23,
+                                                            fontSize: 15,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .w600),
                                                   ),
                                                   const SizedBox(
-                                                    height: 20.0,
+                                                    height: 8.0,
                                                   ),
                                                   Row(
                                                     children: [
+                                                      // tech 1
                                                       Text(
                                                         listPortfolio()[index]
                                                             .technologie1!,
                                                         style: ServiceText()
                                                             .poppinsStyle
                                                             .copyWith(
-                                                                fontSize: 19,
+                                                                fontSize: 12,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w500),
                                                       ),
                                                       const SizedBox(
-                                                        width: 20.0,
+                                                        width: 8.0,
                                                       ),
+
+                                                      // tech 2
                                                       Text(
                                                         listPortfolio()[index]
                                                             .technologie2!,
                                                         style: ServiceText()
                                                             .poppinsStyle
                                                             .copyWith(
-                                                                fontSize: 19,
+                                                                fontSize: 12,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w500),
                                                       ),
                                                       const SizedBox(
-                                                        width: 20.0,
+                                                        width: 8.0,
                                                       ),
+
+                                                      // tech 3
                                                       Text(
                                                         listPortfolio()[index]
                                                             .technologie3!,
                                                         style: ServiceText()
                                                             .poppinsStyle
                                                             .copyWith(
-                                                                fontSize: 19,
+                                                                fontSize: 12,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w500),
                                                       ),
                                                       const SizedBox(
-                                                        width: 20.0,
+                                                        width: 8.0,
                                                       ),
                                                       Text(
                                                         listPortfolio()[index]
@@ -221,7 +250,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                         style: ServiceText()
                                                             .poppinsStyle
                                                             .copyWith(
-                                                                fontSize: 19,
+                                                                fontSize: 12,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w500),
@@ -229,7 +258,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                     ],
                                                   ),
                                                   const SizedBox(
-                                                    height: 40.0,
+                                                    height: 8.0,
                                                   ),
                                                   Row(
                                                     children: [
@@ -237,7 +266,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                         onPressed: () {},
                                                         icon: Icon(
                                                           MdiIcons.github,
-                                                          size: 45,
+                                                          size: 22,
                                                           color: ServiceColor
                                                               .kPrimaryColor,
                                                         ),
@@ -249,7 +278,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                         onPressed: () {},
                                                         icon: Icon(
                                                           MdiIcons.googlePlay,
-                                                          size: 45,
+                                                          size: 22,
                                                           color: ServiceColor
                                                               .kPrimaryColor,
                                                         ),
@@ -260,18 +289,21 @@ class _WorkScreenState extends State<WorkScreen> {
                                               ),
                                             ),
                                           ),
-                                        )
-                                      : SizedBox()),
-                            ],
-                          ),
+                                        ),
+                                      )
+                                    : const SizedBox()),
+                          ],
                         ),
-                      );
-                    },
-                  ),
+                      ),
+                    );
+                  },
                 ),
               ),
-            ],
-          ),
+            ),
+            const Spacer(),
+            // footer
+            const FooterWidget(),
+          ],
         ));
   }
 }

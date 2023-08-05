@@ -7,4 +7,5 @@ class Portfolio {
   String? technologie3;
   String? technologie4;
   String? technologie5;
+  int? id;
 }

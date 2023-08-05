@@ -1,4 +1,4 @@
-import 'classPortfolio.dart';
+import 'class_portfolio.dart';
 
 List<Portfolio> listPortfolio() {
   Portfolio kamiSaiyoApp = Portfolio();
@@ -10,6 +10,7 @@ List<Portfolio> listPortfolio() {
   kamiSaiyoApp.technologie2 = 'Firebase';
   kamiSaiyoApp.technologie3 = 'Dart';
   kamiSaiyoApp.technologie4 = 'Provider (State Management)';
+  kamiSaiyoApp.id = 1;
 
   Portfolio askApp = Portfolio();
   askApp.image = 'assets/images/ask.png';
@@ -20,6 +21,7 @@ List<Portfolio> listPortfolio() {
   askApp.technologie2 = 'Firebase';
   askApp.technologie3 = 'Dart';
   askApp.technologie4 = 'Provider (State Management)';
+  askApp.id = 2;
 
   Portfolio scrollApp = Portfolio();
   scrollApp.image = 'assets/images/scroll.png';
@@ -30,6 +32,7 @@ List<Portfolio> listPortfolio() {
   scrollApp.technologie2 = 'Firebase';
   scrollApp.technologie3 = 'Dart';
   scrollApp.technologie4 = 'GetX (State Management)';
+  scrollApp.id = 3;
 
   Portfolio dismeeApp = Portfolio();
   dismeeApp.image = 'assets/images/dismee.png';
@@ -40,6 +43,7 @@ List<Portfolio> listPortfolio() {
   dismeeApp.technologie2 = 'Firebase';
   dismeeApp.technologie3 = 'Dart';
   dismeeApp.technologie4 = 'Omni Jitsi Meet (API)';
+  dismeeApp.id = 4;
 
   Portfolio todoApp = Portfolio();
   todoApp.image = 'assets/images/to-do.png';
@@ -50,6 +54,7 @@ List<Portfolio> listPortfolio() {
   todoApp.technologie2 = 'Hive (Local Storage)';
   todoApp.technologie3 = 'Dart';
   todoApp.technologie4 = '';
+  todoApp.id = 5;
 
   Portfolio financeApp = Portfolio();
   financeApp.image = 'assets/images/finance-bomb.png';
@@ -60,6 +65,7 @@ List<Portfolio> listPortfolio() {
   financeApp.technologie2 = 'Hive (Local Storage)';
   financeApp.technologie3 = 'Dart';
   financeApp.technologie4 = '';
+  financeApp.id = 6;
 
   Portfolio weatherApp = Portfolio();
   weatherApp.image = 'assets/images/smiling-weather.png';
@@ -70,6 +76,7 @@ List<Portfolio> listPortfolio() {
   weatherApp.technologie2 = 'Hive (Local Storage)';
   weatherApp.technologie3 = 'Dart';
   weatherApp.technologie4 = '';
+  weatherApp.id = 7;
 
   Portfolio signLanguageApp = Portfolio();
   signLanguageApp.image = 'assets/images/sign-language.png';
@@ -80,6 +87,7 @@ List<Portfolio> listPortfolio() {
   signLanguageApp.technologie2 = 'Machine Learning';
   signLanguageApp.technologie3 = 'OpenCV';
   signLanguageApp.technologie4 = 'TensorFlow Lite';
+  signLanguageApp.id = 8;
 
   Portfolio kiStoreApp = Portfolio();
   kiStoreApp.image = 'assets/images/ki-store.png';
@@ -90,8 +98,10 @@ List<Portfolio> listPortfolio() {
   kiStoreApp.technologie2 = 'Riverpod (State Management)';
   kiStoreApp.technologie3 = 'Dart';
   kiStoreApp.technologie4 = '';
+  kiStoreApp.id = 9;
 
   return [
+    kamiSaiyoApp,
     askApp,
     scrollApp,
     dismeeApp,

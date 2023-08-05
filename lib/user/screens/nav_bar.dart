@@ -1,7 +1,7 @@
 // ignore_for_file: unused_field
 import 'package:animate_do/animate_do.dart';
 import 'package:ariski_portfolio/service/color.dart';
-import 'package:ariski_portfolio/user/screens/service_screen.dart';
+import 'package:ariski_portfolio/user/screens/experience_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -36,8 +36,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   //list widget halaman
   final List<Widget> _pages = [
     const HomeScreen(),
+    const ExperienceScreen(),
     const WorkScreen(),
-    const ServiceScreen(),
   ];
 
   //list int nyoba nyoba aja
@@ -73,8 +73,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
               padding: const EdgeInsets.fromLTRB(85, 0, 0, 0),
               child: Row(
                 children: [
+                  // image logo
                   FadeIn(
-                    duration: Duration(milliseconds: 2500),
+                    duration: const Duration(milliseconds: 2500),
                     child: Container(
                       height: 45,
                       width: 45,
@@ -88,8 +89,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                   const SizedBox(
                     width: 7.0,
                   ),
+                  // name website
                   FadeIn(
-                    duration: Duration(milliseconds: 2500),
+                    duration: const Duration(milliseconds: 2500),
                     child: GestureDetector(
                       onTap: () {
                         _scrollToSection(0);
@@ -134,8 +136,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                   scrollDirection: Axis.horizontal,
                   itemCount: _pages.length,
                   itemBuilder: (context, index) {
+                    // text navbar
                     return FadeIn(
-                      duration: Duration(milliseconds: 2500),
+                      duration: const Duration(milliseconds: 2500),
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
