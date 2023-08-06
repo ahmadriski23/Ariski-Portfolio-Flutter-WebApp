@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ServiceColor {
+class UtilsColor {
   static const kPrimaryColor = Color.fromARGB(
     255,
     255,

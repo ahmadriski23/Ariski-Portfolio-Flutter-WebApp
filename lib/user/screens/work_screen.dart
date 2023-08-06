@@ -1,11 +1,12 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:ariski_portfolio/data/list_portfolio.dart';
-import 'package:ariski_portfolio/service/color.dart';
-import 'package:ariski_portfolio/service/text_style.dart';
 import 'package:ariski_portfolio/user/widgets/footer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
+import '../../utils/color.dart';
+import '../../utils/text_style.dart';
 
 class WorkScreen extends StatefulWidget {
   const WorkScreen({super.key});
@@ -138,10 +139,10 @@ class _WorkScreenState extends State<WorkScreen> {
                                                     child: Text(
                                                       listPortfolio()[index]
                                                           .appName!,
-                                                      style: ServiceText()
+                                                      style: UtilsStyle()
                                                           .poppinsStyle
                                                           .copyWith(
-                                                              color: ServiceColor
+                                                              color: UtilsColor
                                                                   .kPrimaryColor,
                                                               fontWeight:
                                                                   FontWeight
@@ -155,7 +156,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                   // ask what is project
                                                   Text(
                                                     'What is $appName ?',
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .poppinsStyle
                                                         .copyWith(
                                                             fontSize: 15,
@@ -170,7 +171,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                   Text(
                                                     listPortfolio()[index]
                                                         .description!,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .poppinsStyle
                                                         .copyWith(
                                                             fontSize: 11,
@@ -184,7 +185,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                   // title technologies
                                                   Text(
                                                     'Technologies',
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .poppinsStyle
                                                         .copyWith(
                                                             fontSize: 15,
@@ -201,7 +202,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                       Text(
                                                         listPortfolio()[index]
                                                             .technologie1!,
-                                                        style: ServiceText()
+                                                        style: UtilsStyle()
                                                             .poppinsStyle
                                                             .copyWith(
                                                                 fontSize: 12,
@@ -217,7 +218,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                       Text(
                                                         listPortfolio()[index]
                                                             .technologie2!,
-                                                        style: ServiceText()
+                                                        style: UtilsStyle()
                                                             .poppinsStyle
                                                             .copyWith(
                                                                 fontSize: 12,
@@ -233,7 +234,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                       Text(
                                                         listPortfolio()[index]
                                                             .technologie3!,
-                                                        style: ServiceText()
+                                                        style: UtilsStyle()
                                                             .poppinsStyle
                                                             .copyWith(
                                                                 fontSize: 12,
@@ -247,7 +248,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                       Text(
                                                         listPortfolio()[index]
                                                             .technologie4!,
-                                                        style: ServiceText()
+                                                        style: UtilsStyle()
                                                             .poppinsStyle
                                                             .copyWith(
                                                                 fontSize: 12,
@@ -267,7 +268,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                         icon: Icon(
                                                           MdiIcons.github,
                                                           size: 22,
-                                                          color: ServiceColor
+                                                          color: UtilsColor
                                                               .kPrimaryColor,
                                                         ),
                                                       ),
@@ -279,7 +280,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                         icon: Icon(
                                                           MdiIcons.googlePlay,
                                                           size: 22,
-                                                          color: ServiceColor
+                                                          color: UtilsColor
                                                               .kPrimaryColor,
                                                         ),
                                                       ),

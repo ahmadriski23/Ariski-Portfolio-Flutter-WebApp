@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:ariski_portfolio/data/list_experience.dart';
-import 'package:ariski_portfolio/service/text_style.dart';
+import 'package:ariski_portfolio/utils/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,7 +17,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
     return Container(
         height: 800,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
+          padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
           child: Column(
             children: [
               FadeInDown(
@@ -118,7 +118,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(dateExp1,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color: Colors.black,
@@ -133,7 +133,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(companyExp1,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                           color: Colors.black,
@@ -148,7 +148,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(jobExp1,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color: Colors.black,
@@ -163,7 +163,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(workOneExp1,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color:
@@ -176,7 +176,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(workTwoExp1,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color:
@@ -189,7 +189,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(workThreeExp1,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color:
@@ -233,7 +233,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(dateExp2,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color: Colors.black,
@@ -249,7 +249,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(companyExp2,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                           color: Colors.black,
@@ -265,7 +265,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(jobExp2,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color: Colors.black,
@@ -281,7 +281,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(workOneExp2,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color:
@@ -296,7 +296,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(workTwoExp2,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color:
@@ -311,7 +311,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                                 duration: const Duration(
                                                     milliseconds: 7500),
                                                 child: Text(workThreeExp2,
-                                                    style: ServiceText()
+                                                    style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
                                                             color:

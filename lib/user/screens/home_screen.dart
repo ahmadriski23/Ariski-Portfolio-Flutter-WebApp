@@ -1,9 +1,12 @@
+import 'dart:developer';
+
 import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:ariski_portfolio/service/color.dart';
+import 'package:ariski_portfolio/utils/color.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:marquee/marquee.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -13,6 +16,20 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with ChangeNotifier {
+  //method url to email
+  Future<void> launchEmailSubmission() async {
+    final Uri params = Uri(
+        scheme: 'mailto',
+        path: 'ahmadriski.work@gmail.com',
+        query: 'subject=&body=');
+
+    if (await canLaunchUrl(params)) {
+      await launchUrl(params);
+    } else {
+      log('Could not launch $params');
+    }
+  }
+
   bool _isHovered = false;
 
   // method text agar berubah warna
@@ -53,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> with ChangeNotifier {
                       height: 200,
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
-                        color: ServiceColor.kPrimaryColor,
+                        color: UtilsColor.kPrimaryColor,
                         borderRadius: BorderRadius.circular(35),
                       ),
                     ),
@@ -150,9 +167,11 @@ class _HomeScreenState extends State<HomeScreen> with ChangeNotifier {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: _isHovered
                                   ? Colors.white
-                                  : ServiceColor.kPrimaryColor,
+                                  : UtilsColor.kPrimaryColor,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              launchEmailSubmission();
+                            },
                             child: Text(
                               'Let`s Talk',
                               style: GoogleFonts.roboto(
@@ -310,7 +329,7 @@ class _HomeScreenState extends State<HomeScreen> with ChangeNotifier {
                       height: 65,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
-                        color: ServiceColor.kPrimaryColor,
+                        color: UtilsColor.kPrimaryColor,
                       ),
                       child: Center(
                         child: Marquee(

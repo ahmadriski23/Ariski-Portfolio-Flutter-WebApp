@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ServiceText {
+class UtilsStyle {
   TextStyle poppinsStyle =
       GoogleFonts.poppins(textStyle: TextStyle(color: Colors.white));
   TextStyle robotoStyle =

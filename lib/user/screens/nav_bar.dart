@@ -1,12 +1,12 @@
 // ignore_for_file: unused_field
 import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/service/color.dart';
 import 'package:ariski_portfolio/user/screens/experience_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../utils/color.dart';
 import '../widgets/hover_text.dart';
 import 'home_screen.dart';
 
@@ -39,9 +39,6 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
     const ExperienceScreen(),
     const WorkScreen(),
   ];
-
-  //list int nyoba nyoba aja
-  final List<int> _intPages = [1, 2, 3];
 
   //scroll controller
   final ScrollController _scrollController = ScrollController();
@@ -115,7 +112,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                             style: GoogleFonts.eduSaBeginner(
                                 textStyle: TextStyle(
                               color: _isHoveredText
-                                  ? ServiceColor.kPrimaryColor
+                                  ? UtilsColor.kPrimaryColor
                                   : Colors.white,
                               fontSize: 27,
                               fontWeight: FontWeight.bold,
