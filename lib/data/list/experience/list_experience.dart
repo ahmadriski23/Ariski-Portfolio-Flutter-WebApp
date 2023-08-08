@@ -1,4 +1,4 @@
-import 'class_experience.dart';
+import '../../model/experience.dart';
 
 List<Experience> listExperience() {
   Experience experience1and2 = Experience();

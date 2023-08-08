@@ -8,14 +8,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:marquee/marquee.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class LargeHomeScreen extends StatefulWidget {
+  const LargeHomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<LargeHomeScreen> createState() => _LargeHomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with ChangeNotifier {
+class _LargeHomeScreenState extends State<LargeHomeScreen> {
   //method url to email
   Future<void> launchEmailSubmission() async {
     final Uri params = Uri(
@@ -35,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> with ChangeNotifier {
   // method text agar berubah warna
   void setIsHovered(bool value) {
     _isHovered = value;
-    notifyListeners();
   }
 
   @override

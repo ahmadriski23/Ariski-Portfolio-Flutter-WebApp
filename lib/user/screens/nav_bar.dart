@@ -1,14 +1,14 @@
 // ignore_for_file: unused_field
 import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/user/screens/experience_screen.dart';
-import 'package:ariski_portfolio/user/screens/work_screen.dart';
+import 'package:ariski_portfolio/user/screens/experience_screen/experience_screen.dart';
+import 'package:ariski_portfolio/user/screens/work_screen/work_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/color.dart';
 import '../widgets/hover_text.dart';
-import 'home_screen.dart';
+import 'home_screen/home_screen.dart';
 
 class NavigationBarScreen extends StatefulWidget {
   const NavigationBarScreen({super.key});
@@ -20,8 +20,24 @@ class NavigationBarScreen extends StatefulWidget {
 class _NavigationBarScreenState extends State<NavigationBarScreen> {
   // method scroll
   void _scrollToSection(int index) {
-    // ignore: prefer_const_declarations
-    final double sectionHeight = 800.0;
+    double sectionHeight;
+    final screenSize = MediaQuery.of(context).size;
+
+    // Tentukan sectionHeight berdasarkan ukuran perangkat
+    if (screenSize.width < 720) {
+      // Perangkat Mobile
+      sectionHeight = 400.0;
+    } else if (screenSize.width >= 720 == screenSize.width < 1000) {
+      // Perangkat Tablet
+      sectionHeight = 450.0;
+    } else if (screenSize.width >= 1000 == screenSize.width < 1350) {
+      // Perangkat Desktop
+      sectionHeight = 515.0;
+    } else {
+      // Perangkat Besar
+      sectionHeight = 800.0;
+    }
+
     _scrollController.animateTo(index * sectionHeight,
         duration: const Duration(milliseconds: 1500), curve: Curves.easeInOut);
   }

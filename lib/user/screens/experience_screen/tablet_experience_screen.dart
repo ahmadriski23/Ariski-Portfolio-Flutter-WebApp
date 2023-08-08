@@ -1,17 +1,17 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/data/list_experience.dart';
+import 'package:ariski_portfolio/data/list/experience/list_experience.dart';
 import 'package:ariski_portfolio/utils/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ExperienceScreen extends StatefulWidget {
-  const ExperienceScreen({super.key});
+class TabletExperienceScreen extends StatefulWidget {
+  const TabletExperienceScreen({super.key});
 
   @override
-  State<ExperienceScreen> createState() => _ExperienceScreenState();
+  State<TabletExperienceScreen> createState() => _TabletExperienceScreenState();
 }
 
-class _ExperienceScreenState extends State<ExperienceScreen> {
+class _TabletExperienceScreenState extends State<TabletExperienceScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(

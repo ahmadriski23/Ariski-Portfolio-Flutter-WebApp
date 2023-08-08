@@ -1,28 +1,28 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/data/list_portfolio.dart';
+import 'package:ariski_portfolio/data/list/portfolio/list_portfolio_v1.dart';
 import 'package:ariski_portfolio/user/widgets/footer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../../utils/color.dart';
-import '../../utils/text_style.dart';
+import '../../../utils/color.dart';
+import '../../../utils/text_style.dart';
 
-class WorkScreen extends StatefulWidget {
-  const WorkScreen({super.key});
+class TabletWorkScreen extends StatefulWidget {
+  const TabletWorkScreen({super.key});
 
   @override
-  State<WorkScreen> createState() => _WorkScreenState();
+  State<TabletWorkScreen> createState() => _TabletWorkScreenState();
 }
 
-class _WorkScreenState extends State<WorkScreen> {
+class _TabletWorkScreenState extends State<TabletWorkScreen> {
   List<bool> _isHovered = [];
 
   @override
   void initState() {
     super.initState();
     // hover gambar secara satu per satu
-    _isHovered = List.generate(listPortfolio().length, (index) => false);
+    _isHovered = List.generate(listPortfolioV1().length, (index) => false);
   }
 
   @override
@@ -60,10 +60,10 @@ class _WorkScreenState extends State<WorkScreen> {
                     crossAxisSpacing: 15,
                     childAspectRatio: 10 / 25,
                   ),
-                  itemCount: listPortfolio().length,
+                  itemCount: listPortfolioV1().length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
-                    var appName = listPortfolio()[index].appName!;
+                    var appName = listPortfolioV1()[index].appName!;
                     return Padding(
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                       child: Container(
@@ -97,7 +97,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                       image: DecorationImage(
                                         fit: BoxFit.fill,
                                         image: AssetImage(
-                                          listPortfolio()[index].image!,
+                                          listPortfolioV1()[index].image!,
                                         ),
                                       ),
                                     ),
@@ -137,7 +137,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                   // judul project
                                                   Center(
                                                     child: Text(
-                                                      listPortfolio()[index]
+                                                      listPortfolioV1()[index]
                                                           .appName!,
                                                       style: UtilsStyle()
                                                           .poppinsStyle
@@ -169,7 +169,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                   ),
                                                   // description
                                                   Text(
-                                                    listPortfolio()[index]
+                                                    listPortfolioV1()[index]
                                                         .description!,
                                                     style: UtilsStyle()
                                                         .poppinsStyle
@@ -200,7 +200,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                     children: [
                                                       // tech 1
                                                       Text(
-                                                        listPortfolio()[index]
+                                                        listPortfolioV1()[index]
                                                             .technologie1!,
                                                         style: UtilsStyle()
                                                             .poppinsStyle
@@ -216,7 +216,7 @@ class _WorkScreenState extends State<WorkScreen> {
 
                                                       // tech 2
                                                       Text(
-                                                        listPortfolio()[index]
+                                                        listPortfolioV1()[index]
                                                             .technologie2!,
                                                         style: UtilsStyle()
                                                             .poppinsStyle
@@ -232,7 +232,7 @@ class _WorkScreenState extends State<WorkScreen> {
 
                                                       // tech 3
                                                       Text(
-                                                        listPortfolio()[index]
+                                                        listPortfolioV1()[index]
                                                             .technologie3!,
                                                         style: UtilsStyle()
                                                             .poppinsStyle
@@ -246,7 +246,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                                         width: 8.0,
                                                       ),
                                                       Text(
-                                                        listPortfolio()[index]
+                                                        listPortfolioV1()[index]
                                                             .technologie4!,
                                                         style: UtilsStyle()
                                                             .poppinsStyle
