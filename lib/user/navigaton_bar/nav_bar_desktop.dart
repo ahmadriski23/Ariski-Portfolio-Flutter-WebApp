@@ -7,8 +7,10 @@ import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/color.dart';
+import '../screens/home_screen/home_screen.dart';
 import '../widgets/hover_text.dart';
-import 'home_screen/home_screen.dart';
+
+// navigation bar untuk halaman desktop dan large
 
 class NavigationBarScreen extends StatefulWidget {
   const NavigationBarScreen({super.key});
@@ -82,6 +84,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             toolbarHeight: 100,
             floating: false,
             backgroundColor: Colors.black,
+            // image logo and name web
             leading: Padding(
               padding: const EdgeInsets.fromLTRB(85, 0, 0, 0),
               child: Row(
@@ -141,6 +144,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                 ],
               ),
             ),
+            // list menu navigation bar
             title: Padding(
               padding: const EdgeInsets.fromLTRB(200, 0, 0, 0),
               child: SizedBox(
@@ -213,6 +217,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             ),
             pinned: true,
           ),
+          // body halaman
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {

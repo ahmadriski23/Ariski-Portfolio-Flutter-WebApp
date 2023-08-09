@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/user/widgets/footer_widget.dart';
+import 'package:ariski_portfolio/user/widgets/work_screen/desktop_screen/footer_desktop_widget.dart';
 import 'package:ariski_portfolio/utils/color.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,7 +59,8 @@ class _DesktopWorkScreenState extends State<DesktopWorkScreen> {
                             unselectedLabelColor: Colors.white,
                             labelColor: UtilsColor.kPrimaryColor,
                             isScrollable: true,
-                            labelPadding: EdgeInsets.fromLTRB(75, 0, 75, 0),
+                            labelPadding:
+                                const EdgeInsets.fromLTRB(75, 0, 75, 0),
                             dividerColor: Colors.transparent,
                             indicatorColor: Colors.transparent,
                             labelStyle: UtilsStyle().robotoStyle.copyWith(
@@ -67,17 +68,17 @@ class _DesktopWorkScreenState extends State<DesktopWorkScreen> {
                                 ),
                             indicatorSize: TabBarIndicatorSize.label,
                             tabs: [
-                              Tab(text: 'Mobile Apps V1'),
-                              Tab(
+                              const Tab(text: 'Mobile Apps V1'),
+                              const Tab(
                                 text: 'Mobile Apps V2',
                               ),
-                              Tab(
+                              const Tab(
                                 text: 'Mobile Apps V3',
                               ),
                             ]),
                       ),
                     ),
-                    Expanded(
+                    const Expanded(
                       child: TabBarView(children: [
                         PortfolioDesktopWidgetVolume1(),
                         PortfolioDesktopWidgetVolume2(),
@@ -87,15 +88,10 @@ class _DesktopWorkScreenState extends State<DesktopWorkScreen> {
                   ],
                 ),
               ),
-
               //view tabbar
-              const SizedBox(
-                height: 15.0,
-              ),
               const Spacer(),
-
               // footer
-              const FooterWidget(),
+              const FooterDesktopWidget(),
             ],
           )),
     );
