@@ -27,14 +27,27 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
   var scaffoldKey = GlobalKey<ScaffoldState>();
 
   // scroll untuk drawer
-  void _scrollToSection(int sectionIndex) {
-    double sectionPosition =
-        sectionIndex * 450.0; // mengatur halaman postition yang akan discroll
-    _scrollController.animateTo(
-      sectionPosition,
-      duration: const Duration(milliseconds: 1500),
-      curve: Curves.easeInOut,
-    );
+  void _scrollToSection(int index) {
+    double sectionHeight;
+    final screenSize = MediaQuery.of(context).size;
+
+    // Tentukan sectionHeight berdasarkan ukuran perangkat
+    if (screenSize.width < 720) {
+      // Perangkat Mobile
+      sectionHeight = 620.0;
+    } else if (screenSize.width >= 720 == screenSize.width < 1000) {
+      // Perangkat Tablet
+      sectionHeight = 450.0;
+    } else if (screenSize.width >= 1000 == screenSize.width < 1350) {
+      // Perangkat Desktop
+      sectionHeight = 515.0;
+    } else {
+      // Perangkat Besar
+      sectionHeight = 800.0;
+    }
+
+    _scrollController.animateTo(index * sectionHeight,
+        duration: const Duration(milliseconds: 1500), curve: Curves.easeInOut);
     Navigator.pop(context); // Close the drawer after selecting a section
   }
 

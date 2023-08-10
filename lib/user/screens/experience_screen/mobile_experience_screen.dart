@@ -15,9 +15,9 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 800,
+        height: 550,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Column(
             children: [
               FadeInDown(
@@ -25,17 +25,17 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                 child: Text("Experience",
                     style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     )),
               ),
               const SizedBox(
-                height: 50.0,
+                height: 35.0,
               ),
               Container(
-                height: 550,
+                height: 460,
                 child: ListView.builder(
                     itemCount: listExperience().length,
                     scrollDirection: Axis.vertical,
@@ -59,7 +59,7 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                           listExperience()[index].workThreeExp2!;
 
                       return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 350),
+                        padding: const EdgeInsets.symmetric(horizontal: 25),
                         child: FadeInUp(
                           duration: const Duration(milliseconds: 7500),
                           child: Container(
@@ -67,7 +67,7 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: []),
-                              height: 550,
+                              height: 460,
                               width: double.infinity,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -77,25 +77,25 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                     children: [
                                       // garis hitam
                                       Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 50, vertical: 0),
+                                        padding: const EdgeInsets.fromLTRB(
+                                            18, 10, 0, 0),
                                         child: Container(
-                                          height: 475,
-                                          width: 3,
+                                          height: 410,
+                                          width: 2,
                                           decoration: const BoxDecoration(
                                               color: Colors.black),
                                         ),
                                       ),
                                       // buletan warna hitam pertama
                                       Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 41, vertical: 0),
+                                        padding: const EdgeInsets.fromLTRB(
+                                            13.5, 10, 0, 0),
                                         child: FadeInLeft(
                                           duration: const Duration(
                                               milliseconds: 7500),
                                           child: Container(
-                                            height: 20,
-                                            width: 20,
+                                            height: 10,
+                                            width: 10,
                                             decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
                                                 color: Colors.black),
@@ -105,9 +105,10 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                       //text experience pertama
                                       Padding(
                                         padding: const EdgeInsets.fromLTRB(
-                                            95, 0, 0, 0),
+                                            40, 7, 20, 0),
                                         child: Container(
-                                          width: 525,
+                                          width:
+                                              MediaQuery.of(context).size.width,
                                           child: Column(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
@@ -121,13 +122,14 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color: Colors.black,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .w500)),
                                               ),
                                               const SizedBox(
-                                                height: 10.0,
+                                                height: 5.0,
                                               ),
                                               FadeIn(
                                                 duration: const Duration(
@@ -136,13 +138,14 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                          fontSize: 10,
                                                           color: Colors.black,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         )),
                                               ),
                                               const SizedBox(
-                                                height: 10.0,
+                                                height: 5.0,
                                               ),
                                               FadeIn(
                                                 duration: const Duration(
@@ -151,13 +154,14 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color: Colors.black,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .w600)),
                                               ),
                                               const SizedBox(
-                                                height: 10.0,
+                                                height: 5.0,
                                               ),
                                               FadeIn(
                                                 duration: const Duration(
@@ -166,11 +170,12 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color:
                                                                 Colors.black)),
                                               ),
                                               const SizedBox(
-                                                height: 8.0,
+                                                height: 5.0,
                                               ),
                                               FadeIn(
                                                 duration: const Duration(
@@ -179,11 +184,12 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color:
                                                                 Colors.black)),
                                               ),
                                               const SizedBox(
-                                                height: 8.0,
+                                                height: 5.0,
                                               ),
                                               FadeIn(
                                                 duration: const Duration(
@@ -192,6 +198,7 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color:
                                                                 Colors.black)),
                                               ),
@@ -203,13 +210,13 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                       //buletan warna hitam kedua
                                       Padding(
                                         padding: const EdgeInsets.fromLTRB(
-                                            41, 252, 0, 0),
+                                            13.5, 215, 0, 0),
                                         child: FadeInLeft(
                                           duration: const Duration(
                                               milliseconds: 7500),
                                           child: Container(
-                                            height: 20,
-                                            width: 20,
+                                            height: 10,
+                                            width: 10,
                                             decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
                                                 color: Colors.black),
@@ -219,9 +226,9 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                       //text experience pertama
                                       Padding(
                                         padding: const EdgeInsets.fromLTRB(
-                                            95, 250, 0, 0),
+                                            40, 212, 20, 0),
                                         child: Container(
-                                          width: 525,
+                                          width: 450,
                                           child: Column(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
@@ -236,13 +243,14 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color: Colors.black,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .w500)),
                                               ),
                                               const SizedBox(
-                                                height: 10.0,
+                                                height: 5.0,
                                               ),
                                               // nama company
                                               FadeIn(
@@ -252,6 +260,7 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                          fontSize: 10,
                                                           color: Colors.black,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -268,13 +277,14 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color: Colors.black,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .w600)),
                                               ),
                                               const SizedBox(
-                                                height: 10.0,
+                                                height: 5.0,
                                               ),
                                               // work experience 1
                                               FadeIn(
@@ -284,11 +294,12 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color:
                                                                 Colors.black)),
                                               ),
                                               const SizedBox(
-                                                height: 8,
+                                                height: 7,
                                               ),
                                               // work experience 2
 
@@ -299,11 +310,12 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color:
                                                                 Colors.black)),
                                               ),
                                               const SizedBox(
-                                                height: 8.0,
+                                                height: 5.0,
                                               ),
                                               // work experience 3
 
@@ -314,6 +326,7 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                                                     style: UtilsStyle()
                                                         .robotoStyle
                                                         .copyWith(
+                                                            fontSize: 10,
                                                             color:
                                                                 Colors.black)),
                                               ),

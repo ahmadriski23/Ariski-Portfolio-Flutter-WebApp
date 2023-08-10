@@ -45,9 +45,9 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 800,
+        height: 655,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 25),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Column(
             children: [
               Stack(children: [
@@ -58,9 +58,9 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                 // kotak panjang berwarna
                 Padding(
                   padding: const EdgeInsets.fromLTRB(
-                    65,
+                    25,
                     15,
-                    65,
+                    25,
                     0,
                   ),
                   child: FadeInDown(
@@ -81,12 +81,12 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 0, 0, 5),
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                           child: ElasticInDown(
                             duration: const Duration(milliseconds: 4000),
                             child: Container(
-                              height: 550,
-                              width: 300,
+                              height: 350,
+                              width: 250,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 image: const DecorationImage(
@@ -99,13 +99,28 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                         ),
                       ]),
                 ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 325, 0, 0),
+                  child: Container(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                        color: Colors.black,
+                        spreadRadius: 5,
+                        blurRadius: 25,
+                        offset: Offset(10, 3),
+                      )
+                    ]),
+                  ),
+                ),
 
                 // text nama dan summary - bagian kiri
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(75, 255, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(25, 240, 0, 0),
                   child: Container(
                     height: 225,
-                    width: 450,
+                    width: 275,
                     decoration: const BoxDecoration(),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -118,12 +133,15 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                               'Ahmad Riski,',
                               style: GoogleFonts.rowdies(
                                   textStyle: const TextStyle(
-                                fontSize: 65,
+                                fontSize: 32,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               )),
                             ),
                           ),
+                        ),
+                        const SizedBox(
+                          height: 7.0,
                         ),
                         FadeInLeft(
                           duration: const Duration(milliseconds: 1900),
@@ -132,7 +150,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                               'Based in Bandung, Indonesia, I am a Flutter Developer and Full Stack Developer with over 1 years experience develop website and apps.',
                               style: GoogleFonts.roboto(
                                   textStyle: const TextStyle(
-                                fontSize: 15,
+                                fontSize: 12,
                                 color: Colors.grey,
                               )),
                             ),
@@ -144,7 +162,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                 ),
                 // button lets talk - bagian kiri
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(75, 450, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(25, 365, 0, 0),
                   child: MouseRegion(
                     cursor: SystemMouseCursors.grab,
                     onEnter: (_) {
@@ -161,7 +179,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                       duration: const Duration(milliseconds: 1900),
                       child: Container(
                         height: 35,
-                        width: 120,
+                        width: 105,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: _isHovered
@@ -177,36 +195,36 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                                   textStyle: const TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w900,
-                                fontSize: 13.0,
+                                fontSize: 10.0,
                               )),
                             )),
                       ),
                     ),
                   ),
                 ),
-                // text quotes - bagian kanan
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(
-                    0,
-                    275,
-                    210,
-                    0,
-                  ),
-                  child: Container(
+                // text quotes di kanan
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(
+                      25,
+                      480,
+                      25,
+                      0,
+                    ),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         FadeInRight(
                           duration: const Duration(milliseconds: 2400),
                           child: Container(
-                            height: 100,
-                            width: 325,
+                            height: 50,
+                            width: 250,
                             child: DefaultTextStyle(
                               style: GoogleFonts.spaceGrotesk(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 18,
+                                fontSize: 11,
                               ),
                               child: AnimatedTextKit(
                                 animatedTexts: [
@@ -228,20 +246,20 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                 ),
                 // text client, project - bagian kanan
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 230, 75, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 420, 0, 0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       FadeInRight(
                         duration: const Duration(milliseconds: 2900),
                         child: Container(
-                          width: 450,
-                          height: 250,
+                          width: MediaQuery.of(context).size.width,
+                          height: 160,
                           decoration: const BoxDecoration(),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            crossAxisAlignment: CrossAxisAlignment.end,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
                                 child: Column(
@@ -249,15 +267,18 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                                     Text("10+",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 25.0,
+                                            fontSize: 17.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
                                         )),
+                                    const SizedBox(
+                                      height: 5.0,
+                                    ),
                                     Text("Complete Project",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 12.0,
+                                            fontSize: 8.0,
                                             color: Colors.grey,
                                           ),
                                         )),
@@ -265,7 +286,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                                 ),
                               ),
                               const SizedBox(
-                                height: 25.0,
+                                width: 25.0,
                               ),
                               Container(
                                 child: Column(
@@ -273,15 +294,18 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                                     Text("99%",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 25.0,
+                                            fontSize: 17.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
                                         )),
+                                    const SizedBox(
+                                      height: 5.0,
+                                    ),
                                     Text("Problem Solving",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 12.0,
+                                            fontSize: 8.0,
                                             color: Colors.grey,
                                           ),
                                         )),
@@ -289,7 +313,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                                 ),
                               ),
                               const SizedBox(
-                                height: 25.0,
+                                width: 25.0,
                               ),
                               Container(
                                 child: Column(
@@ -297,16 +321,19 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                                     Text("95%",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 25.0,
+                                            fontSize: 17.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
                                         )),
+                                    const SizedBox(
+                                      height: 5.0,
+                                    ),
                                     Text("Satisfied Clients",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
                                             color: Colors.grey,
-                                            fontSize: 12.0,
+                                            fontSize: 8.0,
                                           ),
                                         )),
                                   ],
@@ -319,13 +346,14 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                     ],
                   ),
                 ),
+
                 // widget text berjalan
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 550, 0, 0),
                   child: FadeInUp(
                     duration: const Duration(milliseconds: 900),
                     child: Container(
-                      height: 65,
+                      height: 55,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
                         color: UtilsColor.kPrimaryColor,
@@ -337,7 +365,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                           style: GoogleFonts.eduSaBeginner(
                               textStyle: const TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 30,
+                            fontSize: 20,
                           )),
                           scrollAxis: Axis.horizontal,
                           crossAxisAlignment: CrossAxisAlignment.center,
