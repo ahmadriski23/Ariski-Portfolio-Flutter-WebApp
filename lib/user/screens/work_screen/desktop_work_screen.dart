@@ -21,7 +21,7 @@ class _DesktopWorkScreenState extends State<DesktopWorkScreen> {
     return DefaultTabController(
       length: 3,
       child: Container(
-          height: 700,
+          height: 865,
           child: Column(
             children: [
               // text featured project
@@ -42,50 +42,55 @@ class _DesktopWorkScreenState extends State<DesktopWorkScreen> {
               const SizedBox(
                 height: 20.0,
               ),
-              Container(
-                height: 450,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                      child: Container(
-                        height: 30,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: TabBar(
-                            splashBorderRadius: BorderRadius.circular(40),
-                            unselectedLabelColor: Colors.white,
-                            labelColor: UtilsColor.kPrimaryColor,
-                            isScrollable: true,
-                            labelPadding:
-                                const EdgeInsets.fromLTRB(75, 0, 75, 0),
-                            dividerColor: Colors.transparent,
-                            indicatorColor: Colors.transparent,
-                            labelStyle: UtilsStyle().robotoStyle.copyWith(
-                                  fontSize: 12,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 50),
+                child: Container(
+                  height: 550,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        child: Container(
+                          height: 30,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: TabBar(
+                              splashBorderRadius: BorderRadius.circular(40),
+                              unselectedLabelColor: Colors.white,
+                              labelColor: UtilsColor.kPrimaryColor,
+                              isScrollable: true,
+                              labelPadding:
+                                  const EdgeInsets.fromLTRB(75, 0, 75, 0),
+                              dividerColor: Colors.transparent,
+                              indicatorColor: Colors.transparent,
+                              labelStyle: UtilsStyle().robotoStyle.copyWith(
+                                    fontSize: 12,
+                                  ),
+                              indicatorSize: TabBarIndicatorSize.label,
+                              tabs: [
+                                const Tab(text: 'Mobile Apps V1'),
+                                const Tab(
+                                  text: 'Mobile Apps V2',
                                 ),
-                            indicatorSize: TabBarIndicatorSize.label,
-                            tabs: [
-                              const Tab(text: 'Mobile Apps V1'),
-                              const Tab(
-                                text: 'Mobile Apps V2',
-                              ),
-                              const Tab(
-                                text: 'Mobile Apps V3',
-                              ),
-                            ]),
+                                const Tab(
+                                  text: 'Mobile Apps V3',
+                                ),
+                              ]),
+                        ),
                       ),
-                    ),
-                    const Expanded(
-                      child: TabBarView(children: [
-                        PortfolioDesktopWidgetVolume1(),
-                        PortfolioDesktopWidgetVolume2(),
-                        PortfolioDesktopWidgetVolume3(),
-                      ]),
-                    ),
-                  ],
+                      const Expanded(
+                        child: TabBarView(children: [
+                          // widget portfolio work screen
+                          // ada di file work_screen -> widgets > work_screen
+                          PortfolioDesktopWidgetVolume1(),
+                          PortfolioDesktopWidgetVolume2(),
+                          PortfolioDesktopWidgetVolume3(),
+                        ]),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               //view tabbar

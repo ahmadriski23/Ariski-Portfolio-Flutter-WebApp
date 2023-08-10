@@ -31,15 +31,15 @@ class _PortfolioDesktopWidgetVolume1State
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: SizedBox(
-        height: 550,
+        height: 600,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
           child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
-              childAspectRatio: 9 / 21,
+              crossAxisSpacing: 15,
+              mainAxisSpacing: 15,
+              childAspectRatio: 8.5 / 21.5,
             ),
             itemCount: listPortfolioV1().length,
             scrollDirection: Axis.horizontal,
@@ -49,7 +49,7 @@ class _PortfolioDesktopWidgetVolume1State
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: Container(
                   width: size.width,
-                  height: 550,
+                  height: 600,
                   child: Stack(
                     children: [
                       // Gambar dengan efek hover berwarna
@@ -71,7 +71,7 @@ class _PortfolioDesktopWidgetVolume1State
                             duration: const Duration(milliseconds: 2500),
                             child: Container(
                               width: size.width,
-                              height: 550,
+                              height: 600,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(

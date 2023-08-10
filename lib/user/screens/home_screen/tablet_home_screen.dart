@@ -45,7 +45,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 800,
+        height: 525,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 25),
           child: Column(
@@ -58,15 +58,15 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                 // kotak panjang berwarna
                 Padding(
                   padding: const EdgeInsets.fromLTRB(
-                    65,
+                    35,
                     15,
-                    65,
+                    35,
                     0,
                   ),
                   child: FadeInDown(
                     duration: const Duration(milliseconds: 900),
                     child: Container(
-                      height: 200,
+                      height: 150,
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         color: UtilsColor.kPrimaryColor,
@@ -85,7 +85,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                           child: ElasticInDown(
                             duration: const Duration(milliseconds: 4000),
                             child: Container(
-                              height: 550,
+                              height: 395,
                               width: 300,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
@@ -102,10 +102,10 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
 
                 // text nama dan summary - bagian kiri
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(75, 255, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(35, 205, 0, 0),
                   child: Container(
                     height: 225,
-                    width: 450,
+                    width: 350,
                     decoration: const BoxDecoration(),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -118,12 +118,15 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                               'Ahmad Riski,',
                               style: GoogleFonts.rowdies(
                                   textStyle: const TextStyle(
-                                fontSize: 65,
+                                fontSize: 32,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               )),
                             ),
                           ),
+                        ),
+                        const SizedBox(
+                          height: 6.0,
                         ),
                         FadeInLeft(
                           duration: const Duration(milliseconds: 1900),
@@ -132,7 +135,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                               'Based in Bandung, Indonesia, I am a Flutter Developer and Full Stack Developer with over 1 years experience develop website and apps.',
                               style: GoogleFonts.roboto(
                                   textStyle: const TextStyle(
-                                fontSize: 15,
+                                fontSize: 12,
                                 color: Colors.grey,
                               )),
                             ),
@@ -144,7 +147,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                 ),
                 // button lets talk - bagian kiri
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(75, 450, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(35, 325, 0, 0),
                   child: MouseRegion(
                     cursor: SystemMouseCursors.grab,
                     onEnter: (_) {
@@ -161,7 +164,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                       duration: const Duration(milliseconds: 1900),
                       child: Container(
                         height: 35,
-                        width: 120,
+                        width: 105,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: _isHovered
@@ -177,19 +180,19 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                                   textStyle: const TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w900,
-                                fontSize: 13.0,
+                                fontSize: 10.0,
                               )),
                             )),
                       ),
                     ),
                   ),
                 ),
-                // text quotes - bagian kanan
+                // text quotes di kanan
                 Padding(
                   padding: const EdgeInsets.fromLTRB(
                     0,
-                    275,
-                    210,
+                    225,
+                    80,
                     0,
                   ),
                   child: Container(
@@ -200,13 +203,13 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                         FadeInRight(
                           duration: const Duration(milliseconds: 2400),
                           child: Container(
-                            height: 100,
-                            width: 325,
+                            height: 50,
+                            width: 250,
                             child: DefaultTextStyle(
                               style: GoogleFonts.spaceGrotesk(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 18,
+                                fontSize: 13,
                               ),
                               child: AnimatedTextKit(
                                 animatedTexts: [
@@ -228,7 +231,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                 ),
                 // text client, project - bagian kanan
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 230, 75, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 200, 50, 0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -236,20 +239,20 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                       FadeInRight(
                         duration: const Duration(milliseconds: 2900),
                         child: Container(
-                          width: 450,
-                          height: 250,
+                          width: 350,
+                          height: 160,
                           decoration: const BoxDecoration(),
-                          child: Column(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Container(
-                                child: Column(
+                                child: Row(
                                   children: [
                                     Text("10+",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 25.0,
+                                            fontSize: 17.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
@@ -257,7 +260,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                                     Text("Complete Project",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 12.0,
+                                            fontSize: 8.0,
                                             color: Colors.grey,
                                           ),
                                         )),
@@ -265,15 +268,15 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                                 ),
                               ),
                               const SizedBox(
-                                height: 25.0,
+                                width: 25.0,
                               ),
                               Container(
-                                child: Column(
+                                child: Row(
                                   children: [
                                     Text("99%",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 25.0,
+                                            fontSize: 17.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
@@ -281,7 +284,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                                     Text("Problem Solving",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 12.0,
+                                            fontSize: 8.0,
                                             color: Colors.grey,
                                           ),
                                         )),
@@ -289,15 +292,15 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                                 ),
                               ),
                               const SizedBox(
-                                height: 25.0,
+                                width: 25.0,
                               ),
                               Container(
-                                child: Column(
+                                child: Row(
                                   children: [
                                     Text("95%",
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
-                                            fontSize: 25.0,
+                                            fontSize: 17.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
@@ -306,7 +309,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                                         style: GoogleFonts.roboto(
                                           textStyle: const TextStyle(
                                             color: Colors.grey,
-                                            fontSize: 12.0,
+                                            fontSize: 8.0,
                                           ),
                                         )),
                                   ],
@@ -319,13 +322,14 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                     ],
                   ),
                 ),
+
                 // widget text berjalan
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 550, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 395, 0, 0),
                   child: FadeInUp(
                     duration: const Duration(milliseconds: 900),
                     child: Container(
-                      height: 65,
+                      height: 50,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
                         color: UtilsColor.kPrimaryColor,
@@ -337,7 +341,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                           style: GoogleFonts.eduSaBeginner(
                               textStyle: const TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 30,
+                            fontSize: 20,
                           )),
                           scrollAxis: Axis.horizontal,
                           crossAxisAlignment: CrossAxisAlignment.center,

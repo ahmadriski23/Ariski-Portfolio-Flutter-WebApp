@@ -29,7 +29,7 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
   // scroll untuk drawer
   void _scrollToSection(int sectionIndex) {
     double sectionPosition =
-        sectionIndex * 400.0; // mengatur halaman postition yang akan discroll
+        sectionIndex * 450.0; // mengatur halaman postition yang akan discroll
     _scrollController.animateTo(
       sectionPosition,
       duration: const Duration(milliseconds: 1500),

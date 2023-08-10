@@ -102,7 +102,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
 
                 // text nama dan summary - bagian kiri
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(75, 225, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(75, 215, 0, 0),
                   child: Container(
                     height: 225,
                     width: 350,
@@ -147,7 +147,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                 ),
                 // button lets talk - bagian kiri
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(75, 345, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(75, 330, 0, 0),
                   child: MouseRegion(
                     cursor: SystemMouseCursors.grab,
                     onEnter: (_) {
@@ -163,8 +163,8 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                     child: FadeInLeft(
                       duration: const Duration(milliseconds: 1900),
                       child: Container(
-                        height: 25,
-                        width: 100,
+                        height: 35,
+                        width: 110,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: _isHovered

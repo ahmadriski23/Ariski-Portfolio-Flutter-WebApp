@@ -5,16 +5,16 @@ import '../../../../data/list/portfolio/list_portfolio_v2.dart';
 import '../../../../utils/color.dart';
 import '../../../../utils/text_style.dart';
 
-class PortfolioDesktopWidgetVolume2 extends StatefulWidget {
-  const PortfolioDesktopWidgetVolume2({super.key});
+class PortfolioTabletWidgetVolume2 extends StatefulWidget {
+  const PortfolioTabletWidgetVolume2({super.key});
 
   @override
-  State<PortfolioDesktopWidgetVolume2> createState() =>
-      _PortfolioDesktopWidgetVolume2State();
+  State<PortfolioTabletWidgetVolume2> createState() =>
+      _PortfolioTabletWidgetVolume2State();
 }
 
-class _PortfolioDesktopWidgetVolume2State
-    extends State<PortfolioDesktopWidgetVolume2> {
+class _PortfolioTabletWidgetVolume2State
+    extends State<PortfolioTabletWidgetVolume2> {
   List<bool> _isHovered = [];
 
   @override
@@ -30,15 +30,16 @@ class _PortfolioDesktopWidgetVolume2State
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: SizedBox(
-        height: 600,
+        height: 300,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
           child: GridView.builder(
+            shrinkWrap: true,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              crossAxisSpacing: 15,
-              mainAxisSpacing: 15,
-              childAspectRatio: 8.5 / 21.5,
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+              childAspectRatio: 11.5 / 21,
             ),
             itemCount: listPortfolioV2().length,
             scrollDirection: Axis.horizontal,
@@ -48,7 +49,7 @@ class _PortfolioDesktopWidgetVolume2State
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: Container(
                   width: size.width,
-                  height: 600,
+                  height: 300,
                   child: Stack(
                     children: [
                       // Gambar dengan efek hover berwarna
@@ -70,7 +71,7 @@ class _PortfolioDesktopWidgetVolume2State
                             duration: const Duration(milliseconds: 2500),
                             child: Container(
                               width: size.width,
-                              height: 600,
+                              height: 550,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
