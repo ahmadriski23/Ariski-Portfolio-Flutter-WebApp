@@ -82,7 +82,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                          child: ElasticInDown(
+                          child: FadeInDown(
                             duration: const Duration(milliseconds: 4000),
                             child: Container(
                               height: 350,
@@ -126,7 +126,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        FadeInLeft(
+                        FadeInDown(
                           duration: const Duration(milliseconds: 1400),
                           child: Container(
                             child: Text(
@@ -143,7 +143,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                         const SizedBox(
                           height: 7.0,
                         ),
-                        FadeInLeft(
+                        FadeInDown(
                           duration: const Duration(milliseconds: 1900),
                           child: Container(
                             child: Text(
@@ -162,7 +162,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                 ),
                 // button lets talk - bagian kiri
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 365, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(25, 360, 0, 0),
                   child: MouseRegion(
                     cursor: SystemMouseCursors.grab,
                     onEnter: (_) {
@@ -175,11 +175,11 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                         _isHovered = false;
                       });
                     },
-                    child: FadeInLeft(
+                    child: FadeInDown(
                       duration: const Duration(milliseconds: 1900),
                       child: Container(
-                        height: 35,
-                        width: 105,
+                        height: 30,
+                        width: 90,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: _isHovered
@@ -195,7 +195,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                                   textStyle: const TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w900,
-                                fontSize: 10.0,
+                                fontSize: 9.0,
                               )),
                             )),
                       ),
@@ -215,7 +215,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        FadeInRight(
+                        FadeInDown(
                           duration: const Duration(milliseconds: 2400),
                           child: Container(
                             height: 50,
@@ -251,7 +251,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FadeInRight(
+                      FadeInDown(
                         duration: const Duration(milliseconds: 2900),
                         child: Container(
                           width: MediaQuery.of(context).size.width,
@@ -350,7 +350,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                 // widget text berjalan
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 550, 0, 0),
-                  child: FadeInUp(
+                  child: FadeInDown(
                     duration: const Duration(milliseconds: 900),
                     child: Container(
                       height: 55,

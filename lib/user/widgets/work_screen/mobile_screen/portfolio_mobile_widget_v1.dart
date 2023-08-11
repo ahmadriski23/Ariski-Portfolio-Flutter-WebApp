@@ -31,7 +31,7 @@ class _PortfolioMobileWidgetVolume1State
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: SizedBox(
-        height: 500,
+        height: 550,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: GridView.builder(
@@ -43,7 +43,6 @@ class _PortfolioMobileWidgetVolume1State
               childAspectRatio: 16 / 9,
             ),
             itemCount: listPortfolioV1().length,
-            physics: NeverScrollableScrollPhysics(),
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) {
               var appName = listPortfolioV1()[index].appName!;
@@ -51,7 +50,7 @@ class _PortfolioMobileWidgetVolume1State
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: Container(
                   width: size.width,
-                  height: 500,
+                  height: 550,
                   child: Stack(
                     children: [
                       // Gambar dengan efek hover berwarna
@@ -107,7 +106,7 @@ class _PortfolioMobileWidgetVolume1State
                                       ),
                                       child: Padding(
                                         padding: const EdgeInsets.fromLTRB(
-                                            12, 5, 12, 0),
+                                            12, 10, 12, 0),
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
@@ -126,11 +125,11 @@ class _PortfolioMobileWidgetVolume1State
                                                             .kPrimaryColor,
                                                         fontWeight:
                                                             FontWeight.bold,
-                                                        fontSize: 10),
+                                                        fontSize: 8),
                                               ),
                                             ),
                                             const SizedBox(
-                                              height: 6.0,
+                                              height: 10.0,
                                             ),
                                             // ask what is project
                                             Text(
@@ -138,12 +137,12 @@ class _PortfolioMobileWidgetVolume1State
                                               style: UtilsStyle()
                                                   .poppinsStyle
                                                   .copyWith(
-                                                      fontSize: 9,
+                                                      fontSize: 6,
                                                       fontWeight:
                                                           FontWeight.w600),
                                             ),
                                             const SizedBox(
-                                              height: 6.0,
+                                              height: 7.0,
                                             ),
                                             // description
                                             Text(
@@ -152,7 +151,7 @@ class _PortfolioMobileWidgetVolume1State
                                               style: UtilsStyle()
                                                   .poppinsStyle
                                                   .copyWith(
-                                                      fontSize: 10,
+                                                      fontSize: 6,
                                                       fontWeight:
                                                           FontWeight.w500),
                                             ),
@@ -165,7 +164,7 @@ class _PortfolioMobileWidgetVolume1State
                                               style: UtilsStyle()
                                                   .poppinsStyle
                                                   .copyWith(
-                                                      fontSize: 9,
+                                                      fontSize: 6,
                                                       fontWeight:
                                                           FontWeight.w600),
                                             ),
@@ -181,7 +180,7 @@ class _PortfolioMobileWidgetVolume1State
                                                   style: UtilsStyle()
                                                       .poppinsStyle
                                                       .copyWith(
-                                                          fontSize: 10,
+                                                          fontSize: 6,
                                                           fontWeight:
                                                               FontWeight.w500),
                                                 ),
@@ -196,7 +195,7 @@ class _PortfolioMobileWidgetVolume1State
                                                   style: UtilsStyle()
                                                       .poppinsStyle
                                                       .copyWith(
-                                                          fontSize: 10,
+                                                          fontSize: 6,
                                                           fontWeight:
                                                               FontWeight.w500),
                                                 ),
@@ -211,7 +210,7 @@ class _PortfolioMobileWidgetVolume1State
                                                   style: UtilsStyle()
                                                       .poppinsStyle
                                                       .copyWith(
-                                                          fontSize: 10,
+                                                          fontSize: 6,
                                                           fontWeight:
                                                               FontWeight.w500),
                                                 ),
@@ -224,36 +223,38 @@ class _PortfolioMobileWidgetVolume1State
                                                   style: UtilsStyle()
                                                       .poppinsStyle
                                                       .copyWith(
-                                                          fontSize: 10,
+                                                          fontSize: 6,
                                                           fontWeight:
                                                               FontWeight.w500),
                                                 )
                                               ],
                                             ),
                                             const SizedBox(
-                                              height: 2.9,
+                                              height: 10,
                                             ),
                                             Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
-                                                IconButton(
-                                                  onPressed: () {},
-                                                  icon: Icon(
+                                                Container(
+                                                  child: Icon(
                                                     MdiIcons.github,
-                                                    size: 16,
                                                     color: UtilsColor
                                                         .kPrimaryColor,
+                                                    size: 12,
                                                   ),
                                                 ),
                                                 const SizedBox(
-                                                  width: 7.0,
+                                                  width: 12.0,
                                                 ),
-                                                IconButton(
-                                                  onPressed: () {},
-                                                  icon: Icon(
+                                                Container(
+                                                  child: Icon(
                                                     MdiIcons.googlePlay,
-                                                    size: 16,
                                                     color: UtilsColor
                                                         .kPrimaryColor,
+                                                    size: 12,
                                                   ),
                                                 ),
                                               ],

@@ -34,7 +34,7 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
     // Tentukan sectionHeight berdasarkan ukuran perangkat
     if (screenSize.width < 720) {
       // Perangkat Mobile
-      sectionHeight = 620.0;
+      sectionHeight = 610.0;
     } else if (screenSize.width >= 720 == screenSize.width < 1000) {
       // Perangkat Tablet
       sectionHeight = 450.0;
@@ -86,28 +86,13 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
         backgroundColor: Colors.black,
         // appBar
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.black,
           // icons menu
-          leading: Padding(
-            padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
-            child: IconButton(
-              onPressed: () {
-                scaffoldKey.currentState?.openDrawer();
-              },
-              icon: Icon(
-                MdiIcons.menu,
-                color: Colors.white,
-              ),
-            ),
-          ),
+
           // nama web dan logo
           title: Padding(
-            padding: const EdgeInsets.fromLTRB(
-              0,
-              8,
-              0,
-              8,
-            ),
+            padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
             child: SizedBox(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -169,6 +154,20 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
               ),
             ),
           ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 8, 8, 0),
+              child: IconButton(
+                onPressed: () {
+                  scaffoldKey.currentState?.openDrawer();
+                },
+                icon: Icon(
+                  MdiIcons.menu,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
         ),
         // drawer navigation
         drawer: Drawer(

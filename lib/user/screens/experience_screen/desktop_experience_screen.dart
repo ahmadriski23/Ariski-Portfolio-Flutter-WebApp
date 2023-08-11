@@ -61,7 +61,7 @@ class _DesktopExperienceScreenState extends State<DesktopExperienceScreen> {
 
                       return Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 200),
-                        child: FadeInUp(
+                        child: FadeInDown(
                           duration: const Duration(milliseconds: 7500),
                           child: Container(
                               decoration: BoxDecoration(

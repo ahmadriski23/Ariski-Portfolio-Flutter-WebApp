@@ -82,7 +82,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(20, 0, 0, 5),
-                          child: ElasticInDown(
+                          child: FadeInDown(
                             duration: const Duration(milliseconds: 4000),
                             child: Container(
                               height: 550,
@@ -111,7 +111,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        FadeInLeft(
+                        FadeInDown(
                           duration: const Duration(milliseconds: 1400),
                           child: Container(
                             child: Text(
@@ -125,7 +125,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                             ),
                           ),
                         ),
-                        FadeInLeft(
+                        FadeInDown(
                           duration: const Duration(milliseconds: 1900),
                           child: Container(
                             child: Text(
@@ -157,7 +157,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                         _isHovered = false;
                       });
                     },
-                    child: FadeInLeft(
+                    child: FadeInDown(
                       duration: const Duration(milliseconds: 1900),
                       child: Container(
                         height: 35,
@@ -197,7 +197,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        FadeInRight(
+                        FadeInDown(
                           duration: const Duration(milliseconds: 2400),
                           child: Container(
                             height: 100,
@@ -233,7 +233,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      FadeInRight(
+                      FadeInDown(
                         duration: const Duration(milliseconds: 2900),
                         child: Container(
                           width: 450,
@@ -322,7 +322,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                 // widget text berjalan
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 550, 0, 0),
-                  child: FadeInUp(
+                  child: FadeInDown(
                     duration: const Duration(milliseconds: 900),
                     child: Container(
                       height: 65,

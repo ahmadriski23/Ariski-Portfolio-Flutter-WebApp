@@ -27,7 +27,7 @@ class _DesktopWorkScreenState extends State<DesktopWorkScreen> {
               // text featured project
               Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: BounceInDown(
+                child: FadeInDown(
                   duration: const Duration(milliseconds: 5000),
                   child: Text("Featured Projects",
                       style: GoogleFonts.poppins(

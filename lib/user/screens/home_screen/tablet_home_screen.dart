@@ -82,7 +82,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(20, 0, 0, 5),
-                          child: ElasticInDown(
+                          child: FadeInDown(
                             duration: const Duration(milliseconds: 4000),
                             child: Container(
                               height: 395,
@@ -111,7 +111,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        FadeInLeft(
+                        FadeInDown(
                           duration: const Duration(milliseconds: 1400),
                           child: Container(
                             child: Text(
@@ -128,7 +128,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                         const SizedBox(
                           height: 6.0,
                         ),
-                        FadeInLeft(
+                        FadeInDown(
                           duration: const Duration(milliseconds: 1900),
                           child: Container(
                             child: Text(
@@ -160,7 +160,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                         _isHovered = false;
                       });
                     },
-                    child: FadeInLeft(
+                    child: FadeInDown(
                       duration: const Duration(milliseconds: 1900),
                       child: Container(
                         height: 35,
@@ -200,7 +200,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        FadeInRight(
+                        FadeInDown(
                           duration: const Duration(milliseconds: 2400),
                           child: Container(
                             height: 50,
@@ -236,7 +236,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      FadeInRight(
+                      FadeInDown(
                         duration: const Duration(milliseconds: 2900),
                         child: Container(
                           width: 350,
@@ -326,7 +326,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                 // widget text berjalan
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 395, 0, 0),
-                  child: FadeInUp(
+                  child: FadeInDown(
                     duration: const Duration(milliseconds: 900),
                     child: Container(
                       height: 50,

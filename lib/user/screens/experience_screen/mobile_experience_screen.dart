@@ -38,6 +38,7 @@ class _MobileExperienceScreenState extends State<MobileExperienceScreen> {
                 height: 460,
                 child: ListView.builder(
                     itemCount: listExperience().length,
+                    physics: NeverScrollableScrollPhysics(),
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
                       // experience 1
