@@ -35,6 +35,7 @@ class _PortfolioMobileWidgetVolume1State
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: GridView.builder(
+            physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 1,

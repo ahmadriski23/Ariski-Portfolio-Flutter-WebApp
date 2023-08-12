@@ -93,6 +93,7 @@ class _DesktopWorkScreenState extends State<DesktopWorkScreen> {
                   ),
                 ),
               ),
+
               //view tabbar
               const Spacer(),
               // footer

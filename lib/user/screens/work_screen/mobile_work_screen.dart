@@ -21,7 +21,7 @@ class _MobileWorkScreenState extends State<MobileWorkScreen> {
     return DefaultTabController(
       length: 3,
       child: Container(
-          height: 1100,
+          height: 1300,
           child: Column(
             children: [
               // text featured project
@@ -40,12 +40,12 @@ class _MobileWorkScreenState extends State<MobileWorkScreen> {
                 ),
               ),
               const SizedBox(
-                height: 20.0,
+                height: 10.0,
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 50),
                 child: Container(
-                  height: 800,
+                  height: 1000,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,11 +63,11 @@ class _MobileWorkScreenState extends State<MobileWorkScreen> {
                               labelColor: UtilsColor.kPrimaryColor,
                               isScrollable: true,
                               labelPadding:
-                                  const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                                  const EdgeInsets.fromLTRB(20, 0, 20, 0),
                               dividerColor: Colors.transparent,
                               indicatorColor: Colors.transparent,
                               labelStyle: UtilsStyle().robotoStyle.copyWith(
-                                    fontSize: 10,
+                                    fontSize: 11,
                                   ),
                               indicatorSize: TabBarIndicatorSize.label,
                               tabs: const [

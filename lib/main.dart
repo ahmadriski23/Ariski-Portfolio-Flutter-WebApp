@@ -10,7 +10,7 @@ import 'user/navigaton_bar/nav_bar_desktop.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-      options: FirebaseOptions(
+      options: const FirebaseOptions(
           apiKey: "AIzaSyAkBMksYeVSeb8o7uXhClFN5AGpbmag9u4",
           authDomain: "stariski-a1c6a.firebaseapp.com",
           projectId: "stariski-a1c6a",

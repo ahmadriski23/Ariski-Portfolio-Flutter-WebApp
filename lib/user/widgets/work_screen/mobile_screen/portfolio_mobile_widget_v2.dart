@@ -1,7 +1,8 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/data/list/portfolio/list_portfolio_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
+import '../../../../data/list/portfolio/list_portfolio_v2.dart';
 import '../../../../utils/color.dart';
 import '../../../../utils/text_style.dart';
 
@@ -34,6 +35,7 @@ class _PortfolioMobileWidgetVolume2State
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: GridView.builder(
+            physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 1,
