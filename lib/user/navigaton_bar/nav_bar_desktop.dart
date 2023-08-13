@@ -1,5 +1,6 @@
 // ignore_for_file: unused_field
 import 'package:animate_do/animate_do.dart';
+import 'package:ariski_portfolio/user/screens/certificate_skill_screen/certificate_skill_screen.dart';
 import 'package:ariski_portfolio/user/screens/experience_screen/experience_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen/work_screen.dart';
 import 'package:flutter/material.dart';
@@ -48,11 +49,13 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   final List<String> _textPages = [
     'Home',
     'Experience',
+    'Skills',
     'Work',
   ];
 
   //list widget halaman
   final List<Widget> _pages = [
+    const CertificateSkillScreen(),
     const HomeScreen(),
     const ExperienceScreen(),
     const WorkScreen(),
