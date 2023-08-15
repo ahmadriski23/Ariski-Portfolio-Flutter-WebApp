@@ -17,16 +17,13 @@ class _CertificateSkillScreenState extends State<CertificateSkillScreen> {
   Widget build(BuildContext context) {
     return Container(
       height: 800,
-      decoration: BoxDecoration(
-        color: Colors.black,
-      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 60),
         child: Column(
           children: [
             FadeInDown(
               duration: const Duration(milliseconds: 2500),
-              child: Text("Certifications & Skills",
+              child: Text("Certifications",
                   style: GoogleFonts.poppins(
                     textStyle: const TextStyle(
                       fontSize: 30,
@@ -58,14 +55,16 @@ class _CertificateSkillScreenState extends State<CertificateSkillScreen> {
                   height: 400,
                   width: MediaQuery.of(context).size.width,
                   child: GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          childAspectRatio: 19 / 2,
-                          crossAxisSpacing: 150),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              childAspectRatio: 18 / 2,
+                              crossAxisSpacing: 25),
                       itemCount: listCertificate().length,
                       itemBuilder: (context, index) {
                         var title = listCertificate()[index].title;
                         var company = listCertificate()[index].company;
+                        // ignore: unused_local_variable
                         var linkCertificate = listCertificate()[index].company;
                         return Container(
                           height: 50,
@@ -75,14 +74,14 @@ class _CertificateSkillScreenState extends State<CertificateSkillScreen> {
                               Text(
                                 '•  ',
                                 style: UtilsStyle().poppinsStyle.copyWith(
-                                    fontSize: 16,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white),
                               ),
                               Text(
                                 title!,
                                 style: UtilsStyle().poppinsStyle.copyWith(
-                                    fontSize: 16,
+                                    fontSize: 15,
                                     fontStyle: FontStyle.italic,
                                     fontWeight: FontWeight.w500,
                                     color: UtilsColor.kPrimaryColor),
@@ -93,7 +92,7 @@ class _CertificateSkillScreenState extends State<CertificateSkillScreen> {
                               Text(
                                 'by',
                                 style: UtilsStyle().poppinsStyle.copyWith(
-                                    fontSize: 16,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white),
                               ),
@@ -103,7 +102,7 @@ class _CertificateSkillScreenState extends State<CertificateSkillScreen> {
                               Text(
                                 company!,
                                 style: UtilsStyle().poppinsStyle.copyWith(
-                                    fontSize: 16,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white),
                               ),
@@ -115,7 +114,7 @@ class _CertificateSkillScreenState extends State<CertificateSkillScreen> {
                                 child: Text(
                                   '[certificate]',
                                   style: UtilsStyle().poppinsStyle.copyWith(
-                                      fontSize: 16,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.blue),
                                 ),
@@ -131,26 +130,6 @@ class _CertificateSkillScreenState extends State<CertificateSkillScreen> {
               height: 10.0,
             ),
             // * Skill List
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'Skills:',
-                    style: UtilsStyle().poppinsStyle.copyWith(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 5.0,
-                ),
-              ],
-            )
           ],
         ),
       ),

@@ -1,7 +1,8 @@
 // ignore_for_file: unused_field
 import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/user/screens/certificate_skill_screen/certificate_skill_screen.dart';
+import 'package:ariski_portfolio/user/screens/certificate_screen.dart/certificate_screen.dart';
 import 'package:ariski_portfolio/user/screens/experience_screen/experience_screen.dart';
+import 'package:ariski_portfolio/user/screens/skill_screen/skill_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen/work_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -50,14 +51,16 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
     'Home',
     'Experience',
     'Skills',
+    'Certificate',
     'Work',
   ];
 
   //list widget halaman
   final List<Widget> _pages = [
-    const CertificateSkillScreen(),
     const HomeScreen(),
     const ExperienceScreen(),
+    const SkillScreen(),
+    const CertificateSkillScreen(),
     const WorkScreen(),
   ];
 
@@ -78,6 +81,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      // backgroundColor: Color(0xff050625),
       body: CustomScrollView(
         controller: _scrollController,
         slivers: <Widget>[
@@ -87,6 +91,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             toolbarHeight: 100,
             floating: false,
             backgroundColor: Colors.black,
+
+            // backgroundColor: Color(050625),
+
             // image logo and name web
             leading: Padding(
               padding: const EdgeInsets.fromLTRB(85, 0, 0, 0),
