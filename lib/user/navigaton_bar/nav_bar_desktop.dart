@@ -2,7 +2,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:ariski_portfolio/user/screens/certificate_screen.dart/certificate_screen.dart';
 import 'package:ariski_portfolio/user/screens/experience_screen/experience_screen.dart';
-import 'package:ariski_portfolio/user/screens/skill_screen/skill_screen.dart';
+import 'package:ariski_portfolio/user/screens/techstack_screen/techstack_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen/work_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -50,7 +50,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   final List<String> _textPages = [
     'Home',
     'Experience',
-    'Skills',
+    'Techstack',
     'Certificate',
     'Work',
   ];
@@ -59,7 +59,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   final List<Widget> _pages = [
     const HomeScreen(),
     const ExperienceScreen(),
-    const SkillScreen(),
+    const TechstackScreen(),
     const CertificateSkillScreen(),
     const WorkScreen(),
   ];
