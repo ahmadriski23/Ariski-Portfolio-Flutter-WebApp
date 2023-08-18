@@ -60,7 +60,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
     const HomeScreen(),
     const ExperienceScreen(),
     const TechstackScreen(),
-    const CertificateSkillScreen(),
+    const CertificateScreen(),
     const WorkScreen(),
   ];
 
@@ -156,7 +156,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             ),
             // list menu navigation bar
             title: Padding(
-              padding: const EdgeInsets.fromLTRB(200, 0, 0, 0),
+              padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
               child: SizedBox(
                 height: 24.0,
                 child: ListView.builder(

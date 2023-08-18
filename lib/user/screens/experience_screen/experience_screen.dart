@@ -5,14 +5,9 @@ import 'package:ariski_portfolio/user/screens/experience_screen/mobile_experienc
 import 'package:ariski_portfolio/user/screens/experience_screen/tablet_experience_screen.dart';
 import 'package:flutter/material.dart';
 
-class ExperienceScreen extends StatefulWidget {
+class ExperienceScreen extends StatelessWidget {
   const ExperienceScreen({super.key});
 
-  @override
-  State<ExperienceScreen> createState() => _ExperienceScreenState();
-}
-
-class _ExperienceScreenState extends State<ExperienceScreen> {
   @override
   Widget build(BuildContext context) {
     return const Responsive(

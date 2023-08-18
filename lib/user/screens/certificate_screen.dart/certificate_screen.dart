@@ -1,138 +1,21 @@
-import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/data/list/certificate/list_certificate.dart';
-import 'package:ariski_portfolio/utils/color.dart';
-import 'package:ariski_portfolio/utils/text_style.dart';
+// ignore_for_file: deprecated_member_use
+import 'package:ariski_portfolio/responsive.dart';
+import 'package:ariski_portfolio/user/screens/certificate_screen.dart/desktop_certificate_screen.dart';
+import 'package:ariski_portfolio/user/screens/certificate_screen.dart/large_certificate_screen.dart';
+import 'package:ariski_portfolio/user/screens/certificate_screen.dart/tablet_certificate_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class CertificateSkillScreen extends StatefulWidget {
-  const CertificateSkillScreen({super.key});
+import 'mobile_certificate_screen.dart';
 
-  @override
-  State<CertificateSkillScreen> createState() => _CertificateSkillScreenState();
-}
+class CertificateScreen extends StatelessWidget {
+  const CertificateScreen({super.key});
 
-class _CertificateSkillScreenState extends State<CertificateSkillScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 800,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 60),
-        child: Column(
-          children: [
-            FadeInDown(
-              duration: const Duration(milliseconds: 2500),
-              child: Text("Certifications",
-                  style: GoogleFonts.poppins(
-                    textStyle: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 35.0,
-            ),
-            // * Certifications List
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Certifications:',
-                  style: UtilsStyle().poppinsStyle.copyWith(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                ),
-                const SizedBox(
-                  height: 5.0,
-                ),
-                Container(
-                  height: 400,
-                  width: MediaQuery.of(context).size.width,
-                  child: GridView.builder(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              childAspectRatio: 18 / 2,
-                              crossAxisSpacing: 25),
-                      itemCount: listCertificate().length,
-                      itemBuilder: (context, index) {
-                        var title = listCertificate()[index].title;
-                        var company = listCertificate()[index].company;
-                        // ignore: unused_local_variable
-                        var linkCertificate = listCertificate()[index].company;
-                        return Container(
-                          height: 50,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                '•  ',
-                                style: UtilsStyle().poppinsStyle.copyWith(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
-                              Text(
-                                title!,
-                                style: UtilsStyle().poppinsStyle.copyWith(
-                                    fontSize: 15,
-                                    fontStyle: FontStyle.italic,
-                                    fontWeight: FontWeight.w500,
-                                    color: UtilsColor.kPrimaryColor),
-                              ),
-                              const SizedBox(
-                                width: 5.0,
-                              ),
-                              Text(
-                                'by',
-                                style: UtilsStyle().poppinsStyle.copyWith(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
-                              const SizedBox(
-                                width: 5.0,
-                              ),
-                              Text(
-                                company!,
-                                style: UtilsStyle().poppinsStyle.copyWith(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
-                              const SizedBox(
-                                width: 5.0,
-                              ),
-                              InkWell(
-                                onTap: () {},
-                                child: Text(
-                                  '[certificate]',
-                                  style: UtilsStyle().poppinsStyle.copyWith(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue),
-                                ),
-                              )
-                            ],
-                          ),
-                        );
-                      }),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
-            // * Skill List
-          ],
-        ),
-      ),
-    );
+    return const Responsive(
+        mobile: MobileCertificateScreen(),
+        tablet: TabletCertificateScreen(),
+        desktop: DesktopCertificateScreen(),
+        large: LargeCertificateScreen());
   }
 }

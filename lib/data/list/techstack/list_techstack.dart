@@ -13,10 +13,6 @@ List<Techstack> listTechstack() {
   javascript.imageLogo = 'assets/images/Javascript.png';
   javascript.techStack = 'Javascript';
 
-  Techstack nodejs = Techstack();
-  nodejs.imageLogo = 'assets/images/NodeJS.png';
-  nodejs.techStack = 'Node JS';
-
   Techstack html = Techstack();
   html.imageLogo = 'assets/images/Html.png';
   html.techStack = 'HTML';
@@ -25,13 +21,33 @@ List<Techstack> listTechstack() {
   css.imageLogo = 'assets/images/Css.png';
   css.techStack = 'CSS';
 
-  // Techstack firebase = Techstack();
-  // firebase.imageLogo = '';
-  // firebase.techStack = '';
+  Techstack github = Techstack();
+  github.imageLogo = 'assets/images/Github.png';
+  github.techStack = 'Github';
+
+  Techstack firebase = Techstack();
+  firebase.imageLogo = 'assets/images/Firebase.png';
+  firebase.techStack = 'Firebase';
+
+  Techstack nodeJS = Techstack();
+  nodeJS.imageLogo = 'assets/images/NodeJS.png';
+  nodeJS.techStack = 'Node JS';
+
+  Techstack expressJS = Techstack();
+  expressJS.imageLogo = 'assets/images/ExpressJS.png';
+  expressJS.techStack = 'Express JS';
 
   Techstack mongodb = Techstack();
   mongodb.imageLogo = 'assets/images/MongoDB.png';
   mongodb.techStack = 'Mongo DB';
+
+  Techstack mySQL = Techstack();
+  mySQL.imageLogo = 'assets/images/MySQL.png';
+  mySQL.techStack = 'My SQL';
+
+  Techstack git = Techstack();
+  git.imageLogo = 'assets/images/Git.png';
+  git.techStack = 'Git';
 
   return [
     dart,
@@ -39,7 +55,12 @@ List<Techstack> listTechstack() {
     mongodb,
     html,
     css,
-    nodejs,
+    github,
+    firebase,
+    expressJS,
+    nodeJS,
     javascript,
+    mySQL,
+    git
   ];
 }

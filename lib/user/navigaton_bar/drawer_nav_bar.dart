@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:ariski_portfolio/user/screens/certificate_screen.dart/certificate_screen.dart';
 import 'package:ariski_portfolio/user/screens/experience_screen/experience_screen.dart';
 import 'package:ariski_portfolio/user/screens/home_screen/home_screen.dart';
+import 'package:ariski_portfolio/user/screens/techstack_screen/techstack_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen/work_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,10 +36,10 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
     // Tentukan sectionHeight berdasarkan ukuran perangkat
     if (screenSize.width < 720) {
       // Perangkat Mobile
-      sectionHeight = 610.0;
+      sectionHeight = 595.0;
     } else if (screenSize.width >= 720 == screenSize.width < 1000) {
       // Perangkat Tablet
-      sectionHeight = 450.0;
+      sectionHeight = 525.0;
     } else if (screenSize.width >= 1000 == screenSize.width < 1350) {
       // Perangkat Desktop
       sectionHeight = 515.0;
@@ -66,6 +68,8 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
   final List<Widget> _pages = [
     const HomeScreen(),
     const ExperienceScreen(),
+    const TechstackScreen(),
+    const CertificateScreen(),
     const WorkScreen(),
   ];
 
@@ -73,6 +77,8 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
   final List<String> _textPages = [
     'Home',
     'Experience',
+    'Techstack',
+    'Certificate',
     'Work',
   ];
 
@@ -223,7 +229,7 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
                     child: Text(
                       'ahmadriski.',
                       style: GoogleFonts.eduSaBeginner(
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                         color: Colors.white,
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -237,7 +243,7 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
               ),
               // list nama drawer
               Container(
-                height: 200,
+                height: 250,
                 child: ListView.builder(
                   scrollDirection: Axis.vertical,
                   itemCount: _pages.length,

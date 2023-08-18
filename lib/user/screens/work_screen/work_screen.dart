@@ -6,14 +6,9 @@ import 'package:flutter/material.dart';
 import '../../../responsive.dart';
 import 'mobile_work_screen.dart';
 
-class WorkScreen extends StatefulWidget {
+class WorkScreen extends StatelessWidget {
   const WorkScreen({super.key});
 
-  @override
-  State<WorkScreen> createState() => _WorkScreenState();
-}
-
-class _WorkScreenState extends State<WorkScreen> {
   @override
   Widget build(BuildContext context) {
     return const Responsive(

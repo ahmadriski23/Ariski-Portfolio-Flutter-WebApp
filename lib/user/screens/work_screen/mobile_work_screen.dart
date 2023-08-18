@@ -51,7 +51,7 @@ class _MobileWorkScreenState extends State<MobileWorkScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                        padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                         child: Container(
                           height: 30,
                           decoration: BoxDecoration(
@@ -63,11 +63,11 @@ class _MobileWorkScreenState extends State<MobileWorkScreen> {
                               labelColor: UtilsColor.kPrimaryColor,
                               isScrollable: true,
                               labelPadding:
-                                  const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                  const EdgeInsets.fromLTRB(17, 0, 17, 0),
                               dividerColor: Colors.transparent,
                               indicatorColor: Colors.transparent,
                               labelStyle: UtilsStyle().robotoStyle.copyWith(
-                                    fontSize: 11,
+                                    fontSize: 10,
                                   ),
                               indicatorSize: TabBarIndicatorSize.label,
                               tabs: const [

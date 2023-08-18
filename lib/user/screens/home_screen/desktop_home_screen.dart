@@ -120,6 +120,11 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                                   textStyle: const TextStyle(
                                 fontSize: 32,
                                 color: Colors.white,
+                                // shadows: [
+                                //   Shadow(
+                                //       offset: Offset(2, 0),
+                                //       color: UtilsColor.kPrimaryColor)
+                                // ],
                                 fontWeight: FontWeight.bold,
                               )),
                             ),
