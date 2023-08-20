@@ -2,7 +2,7 @@ import '../../model/portfolio.dart';
 
 List<Portfolio> listPortfolioV1() {
   Portfolio kamiSaiyoApp = Portfolio();
-  kamiSaiyoApp.image = 'assets/images/kami-saiyo.png';
+  kamiSaiyoApp.image = 'assets/images/projects/kami-saiyo.png';
   kamiSaiyoApp.appName = 'Kami Saiyo App';
   kamiSaiyoApp.description =
       'Kami Saiyo is an online food selling application specifically for Nasi Padang stalls which is a typical food of West Sumatra and very easy to understand interface.';
@@ -12,7 +12,7 @@ List<Portfolio> listPortfolioV1() {
   kamiSaiyoApp.technologie4 = 'Provider (State Management)';
 
   Portfolio askApp = Portfolio();
-  askApp.image = 'assets/images/ask.png';
+  askApp.image = 'assets/images/projects/ask.png';
   askApp.appName = 'Aplikasi Suara Konsumen App';
   askApp.description =
       'ASK App is a social media application that is used by users to complain about their complaints on social media. With a user interface that is very easy to understand.';
@@ -22,7 +22,7 @@ List<Portfolio> listPortfolioV1() {
   askApp.technologie4 = 'Provider (State Management)';
 
   Portfolio scrollApp = Portfolio();
-  scrollApp.image = 'assets/images/scroll.png';
+  scrollApp.image = 'assets/images/projects/scroll.png';
   scrollApp.appName = 'Scroll App';
   scrollApp.description =
       'Scroll App is a clone application from TikTok whose UI is as similar as possible. has login features, adding videos, commenting on videos, searching for users, following users and viewing user profiles. with a UI that is very easy to see and has a UX that is very comfortable to use.';
@@ -32,7 +32,7 @@ List<Portfolio> listPortfolioV1() {
   scrollApp.technologie4 = 'GetX (State Management)';
 
   Portfolio dismeeApp = Portfolio();
-  dismeeApp.image = 'assets/images/dismee.png';
+  dismeeApp.image = 'assets/images/projects/dismee.png';
   dismeeApp.appName = 'Dismee App';
   dismeeApp.description =
       'Dismee App is a clone application from Zoom with a UI that looks as similar as possible. has login features, makes meet, join meet, and view meet history and of course has animations that make users very comfortable in using this application.';

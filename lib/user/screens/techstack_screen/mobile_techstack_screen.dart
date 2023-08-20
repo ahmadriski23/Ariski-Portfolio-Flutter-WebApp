@@ -50,37 +50,47 @@ class _MobileTechstackScreenState extends State<MobileTechstackScreen> {
                       itemBuilder: (context, index) {
                         var imageLogo = listTechstack()[index].imageLogo;
                         var techStack = listTechstack()[index].techStack;
-                        return Container(
-                          height: 85,
-                          width: 175,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color.fromARGB(255, 248, 247, 247)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: 30,
-                                width: 85,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    fit: BoxFit.contain,
-                                    image: AssetImage('$imageLogo'),
+                        return FadeInDown(
+                          duration: const Duration(milliseconds: 2500),
+                          child: Container(
+                            height: 85,
+                            width: 175,
+                            decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    offset: Offset(1, 3),
+                                    color: Colors.grey,
+                                    blurRadius: 5,
+                                  )
+                                ],
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color.fromARGB(255, 248, 247, 247)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  height: 30,
+                                  width: 85,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.contain,
+                                      image: AssetImage('$imageLogo'),
+                                    ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 10.0,
-                              ),
-                              Text(
-                                techStack!,
-                                style: UtilsStyle().poppinsStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 8.5,
-                                    fontWeight: FontWeight.bold),
-                              )
-                            ],
+                                const SizedBox(
+                                  height: 10.0,
+                                ),
+                                Text(
+                                  techStack!,
+                                  style: UtilsStyle().poppinsStyle.copyWith(
+                                      color: Colors.black,
+                                      fontSize: 8.5,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ),
                           ),
                         );
                       }),

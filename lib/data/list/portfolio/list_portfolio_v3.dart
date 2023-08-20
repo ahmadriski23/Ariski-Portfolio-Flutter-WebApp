@@ -2,7 +2,7 @@ import '../../model/portfolio.dart';
 
 List<Portfolio> listPortfolioV3() {
   Portfolio todoApp = Portfolio();
-  todoApp.image = 'assets/images/to-do.png';
+  todoApp.image = 'assets/images/projects/to-do.png';
   todoApp.appName = 'To Do App';
   todoApp.description =
       'Todo App is a daily checklist App. This one to do list App is easy to use with a very easy to understand user interface. User can Add to do, Delete to do and Complete to do.';

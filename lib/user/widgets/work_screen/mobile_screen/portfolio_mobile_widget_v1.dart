@@ -17,7 +17,6 @@ class PortfolioMobileWidgetVolume1 extends StatefulWidget {
 class _PortfolioMobileWidgetVolume1State
     extends State<PortfolioMobileWidgetVolume1> {
   List<bool> _isHovered = [];
-
   @override
   void initState() {
     super.initState();
@@ -54,23 +53,21 @@ class _PortfolioMobileWidgetVolume1State
                   height: 550,
                   child: Stack(
                     children: [
-                      // Gambar dengan efek hover berwarna
-                      MouseRegion(
-                        cursor: SystemMouseCursors.grabbing,
-                        onEnter: (_) {
-                          setState(() {
-                            _isHovered[index] = true;
-                          });
-                        },
-                        onExit: (_) {
-                          setState(() {
-                            _isHovered[index] = false;
-                          });
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                          child: FadeInDown(
-                            duration: const Duration(milliseconds: 2500),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        child: FadeInDown(
+                          duration: const Duration(milliseconds: 2500),
+                          child: InkWell(
+                            onDoubleTap: () {
+                              setState(() {
+                                _isHovered[index] = false;
+                              });
+                            },
+                            onTap: () {
+                              setState(() {
+                                _isHovered[index] = true;
+                              });
+                            },
                             child: Container(
                               width: size.width,
                               height: 550,

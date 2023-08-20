@@ -64,9 +64,16 @@ class _LargeExperienceScreenState extends State<LargeExperienceScreen> {
                           duration: const Duration(milliseconds: 7500),
                           child: Container(
                               decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: []),
+                                boxShadow: [
+                                  BoxShadow(
+                                      offset: Offset(2, 2),
+                                      color: Colors.grey,
+                                      blurRadius: 7,
+                                      spreadRadius: 2)
+                                ],
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                               height: 550,
                               width: double.infinity,
                               child: Column(

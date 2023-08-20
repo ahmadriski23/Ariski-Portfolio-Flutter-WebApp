@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "611829206220",
+    "project_id": "stariski-a1c6a",
+    "storage_bucket": "stariski-a1c6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611829206220:android:4318bc2515903974560669",
+        "android_client_info": {
+          "package_name": "com.example.ariski_portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611829206220-3ccr3tg60js40ju3k5jjbvfd2g64uj76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0dtQlwuhT1iqkQMd-JZWeNaW2Wz0np0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611829206220-3ccr3tg60js40ju3k5jjbvfd2g64uj76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

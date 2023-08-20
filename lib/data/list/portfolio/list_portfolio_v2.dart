@@ -2,7 +2,7 @@ import '../../model/portfolio.dart';
 
 List<Portfolio> listPortfolioV2() {
   Portfolio financeApp = Portfolio();
-  financeApp.image = 'assets/images/finance-bomb.png';
+  financeApp.image = 'assets/images/projects/finance-bomb.png';
   financeApp.appName = 'Finance Bomb App';
   financeApp.description =
       'Finance Bomb is an application where users can manage the finances they get or spend. With a user interface that is very easy to understand.';
@@ -12,7 +12,7 @@ List<Portfolio> listPortfolioV2() {
   financeApp.technologie4 = '';
 
   Portfolio weatherApp = Portfolio();
-  weatherApp.image = 'assets/images/smiling-weather.png';
+  weatherApp.image = 'assets/images/projects/smiling-weather.png';
   weatherApp.appName = 'Smilling Weather App';
   weatherApp.description =
       'Smiling Weather is a weather detection app with an easy to understand user interface. User can see weather conditions now and a few hours later.';
@@ -22,7 +22,7 @@ List<Portfolio> listPortfolioV2() {
   weatherApp.technologie4 = '';
 
   Portfolio signLanguageApp = Portfolio();
-  signLanguageApp.image = 'assets/images/sign-language.png';
+  signLanguageApp.image = 'assets/images/projects/sign-language.png';
   signLanguageApp.appName = 'Sign Language Recognition App';
   signLanguageApp.description =
       'Sign language recognition Application with a User Interface that is very easy to understand and is specialized to self-identification and obtaining information. User can do hand interaction and the identified letters will appear.';
@@ -32,7 +32,7 @@ List<Portfolio> listPortfolioV2() {
   signLanguageApp.technologie4 = 'TensorFlow Lite';
 
   Portfolio kiStoreApp = Portfolio();
-  kiStoreApp.image = 'assets/images/ki-store.png';
+  kiStoreApp.image = 'assets/images/projects/ki-store.png';
   kiStoreApp.appName = 'KiStore App';
   kiStoreApp.description =
       'KiStore App is an Ecommerce application with various needs for goods including electronics. Users can use the cart and purchase features with an easy-to-understand user interface.';

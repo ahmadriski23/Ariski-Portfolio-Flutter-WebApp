@@ -65,9 +65,16 @@ class _DesktopExperienceScreenState extends State<DesktopExperienceScreen> {
                           duration: const Duration(milliseconds: 7500),
                           child: Container(
                               decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: []),
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                      offset: Offset(2, 2),
+                                      color: Colors.grey,
+                                      blurRadius: 7,
+                                      spreadRadius: 2)
+                                ],
+                              ),
                               height: 425,
                               width: double.infinity,
                               child: Column(
