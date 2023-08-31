@@ -1,16 +1,28 @@
-# ariski_portfolio
+# Portfolio Web 
 
-A new Flutter project.
+A Portfolio Web- Works on Web & Android! 
 
-## Getting Started
+## Features
+- Full Animated Website 
+- Smooth Scrolling Animation in Navbar
+- URL Launcher
+- Firebase Hosting
+- Responsive Website
+- Simply UI/UX
+- Animated Splash Screen Web
+- Marquee Text Animated
 
-This project is a starting point for a Flutter application.
+## Pictures
+<p align="center">
+  <img width="1000" src="https://github.com/ahmadriski23/Ariski-Portfolio-Flutter/blob/main/ScreenshotPorto.png" alt="Youtube Tutorial Image">
+</p>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tech Used
+**Server**: Firebase, Firebase Hosting
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Client**: Flutter
+    
+## Feedback
+
+If you have any feedback, please reach out to me at ahmadriski.work@gmail.com
