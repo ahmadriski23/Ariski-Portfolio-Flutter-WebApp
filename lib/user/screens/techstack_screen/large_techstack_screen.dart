@@ -14,7 +14,7 @@ class LargeTechstackScreen extends StatefulWidget {
 class _LargeTechstackScreenState extends State<LargeTechstackScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 800,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 60),
@@ -36,11 +36,12 @@ class _LargeTechstackScreenState extends State<LargeTechstackScreen> {
                 const SizedBox(
                   height: 35.0,
                 ),
-                Container(
+                SizedBox(
                   height: 500,
                   child: GridView.builder(
                       itemCount: listTechstack().length,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         childAspectRatio: 16 / 9,
                         crossAxisCount: 6,
                         mainAxisSpacing: 35,
@@ -56,14 +57,15 @@ class _LargeTechstackScreenState extends State<LargeTechstackScreen> {
                             width: 175,
                             decoration: BoxDecoration(
                                 boxShadow: [
-                                  BoxShadow(
+                                  const BoxShadow(
                                     offset: Offset(1, 3),
                                     color: Colors.grey,
                                     blurRadius: 5,
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 248, 247, 247)),
+                                color:
+                                    const Color.fromARGB(255, 248, 247, 247)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
