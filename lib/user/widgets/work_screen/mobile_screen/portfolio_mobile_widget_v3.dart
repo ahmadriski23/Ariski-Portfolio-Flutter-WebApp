@@ -35,7 +35,7 @@ class _PortfolioMobileWidgetVolume3State
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: GridView.builder(
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 1,
@@ -49,7 +49,7 @@ class _PortfolioMobileWidgetVolume3State
               var appName = listPortfolioV3()[index].appName!;
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                child: Container(
+                child: SizedBox(
                   width: size.width,
                   height: 550,
                   child: Stack(
@@ -237,7 +237,7 @@ class _PortfolioMobileWidgetVolume3State
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                Container(
+                                                SizedBox(
                                                   child: Icon(
                                                     MdiIcons.github,
                                                     color: UtilsColor
@@ -248,7 +248,7 @@ class _PortfolioMobileWidgetVolume3State
                                                 const SizedBox(
                                                   width: 12.0,
                                                 ),
-                                                Container(
+                                                SizedBox(
                                                   child: Icon(
                                                     MdiIcons.googlePlay,
                                                     color: UtilsColor

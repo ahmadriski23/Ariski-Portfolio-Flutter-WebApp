@@ -73,7 +73,7 @@ class _TabletCertificateScreenState extends State<TabletCertificateScreen> {
                 const SizedBox(
                   height: 5.0,
                 ),
-                Container(
+                SizedBox(
                   height: 400,
                   width: MediaQuery.of(context).size.width,
                   child: GridView.builder(
@@ -90,7 +90,7 @@ class _TabletCertificateScreenState extends State<TabletCertificateScreen> {
                             listCertificate()[index].linkCertificate;
                         return FadeInDown(
                           duration: const Duration(milliseconds: 2500),
-                          child: Container(
+                          child: SizedBox(
                             height: 50,
                             child: Column(
                               children: [

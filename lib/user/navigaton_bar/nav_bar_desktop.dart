@@ -5,7 +5,6 @@ import 'package:ariski_portfolio/user/screens/experience_screen/experience_scree
 import 'package:ariski_portfolio/user/screens/techstack_screen/techstack_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen/work_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/color.dart';
@@ -33,13 +32,13 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
       sectionHeight = 400.0;
     } else if (screenSize.width >= 720 == screenSize.width < 1000) {
       // Perangkat Tablet
-      sectionHeight = 450.0;
+      sectionHeight = 300.0;
     } else if (screenSize.width >= 1000 == screenSize.width < 1350) {
       // Perangkat Desktop
-      sectionHeight = 515.0;
+      sectionHeight = 460.0;
     } else {
       // Perangkat Besar
-      sectionHeight = 800.0;
+      sectionHeight = 525.0;
     }
 
     _scrollController.animateTo(index * sectionHeight,

@@ -44,7 +44,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 526,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 25),
@@ -113,21 +113,19 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                       children: [
                         FadeInDown(
                           duration: const Duration(milliseconds: 1400),
-                          child: Container(
-                            child: Text(
-                              'Ahmad Riski,',
-                              style: GoogleFonts.rowdies(
-                                  textStyle: const TextStyle(
-                                fontSize: 32,
-                                color: Colors.white,
-                                // shadows: [
-                                //   Shadow(
-                                //       offset: Offset(2, 0),
-                                //       color: UtilsColor.kPrimaryColor)
-                                // ],
-                                fontWeight: FontWeight.bold,
-                              )),
-                            ),
+                          child: Text(
+                            'Ahmad Riski,',
+                            style: GoogleFonts.rowdies(
+                                textStyle: const TextStyle(
+                              fontSize: 32,
+                              color: Colors.white,
+                              // shadows: [
+                              //   Shadow(
+                              //       offset: Offset(2, 0),
+                              //       color: UtilsColor.kPrimaryColor)
+                              // ],
+                              fontWeight: FontWeight.bold,
+                            )),
                           ),
                         ),
                         const SizedBox(
@@ -135,15 +133,13 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                         ),
                         FadeInDown(
                           duration: const Duration(milliseconds: 1900),
-                          child: Container(
-                            child: Text(
-                              'Based in Bandung, Indonesia, I am a Flutter Developer and Full Stack Developer with over 1 years experience develop website and apps.',
-                              style: GoogleFonts.roboto(
-                                  textStyle: const TextStyle(
-                                fontSize: 12,
-                                color: Colors.grey,
-                              )),
-                            ),
+                          child: Text(
+                            'Based in Bandung, Indonesia, I am a Flutter Developer and Full Stack Developer with over 1 years experience develop website and apps.',
+                            style: GoogleFonts.roboto(
+                                textStyle: const TextStyle(
+                              fontSize: 12,
+                              color: Colors.grey,
+                            )),
                           ),
                         )
                       ],
@@ -167,7 +163,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                     },
                     child: FadeInDown(
                       duration: const Duration(milliseconds: 1900),
-                      child: Container(
+                      child: SizedBox(
                         height: 35,
                         width: 110,
                         child: ElevatedButton(
@@ -200,38 +196,36 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                     145,
                     0,
                   ),
-                  child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        FadeInDown(
-                          duration: const Duration(milliseconds: 2400),
-                          child: Container(
-                            height: 50,
-                            width: 250,
-                            child: DefaultTextStyle(
-                              style: GoogleFonts.spaceGrotesk(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 11,
-                              ),
-                              child: AnimatedTextKit(
-                                animatedTexts: [
-                                  TypewriterAnimatedText(
-                                    textAlign: TextAlign.center,
-                                    '"If you`re going to do something new or innovative, you have to be willing to accept misconceptions."',
-                                    speed: const Duration(milliseconds: 150),
-                                  ),
-                                ],
-                                pause: const Duration(seconds: 15),
-                                displayFullTextOnTap: true,
-                              ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      FadeInDown(
+                        duration: const Duration(milliseconds: 2400),
+                        child: SizedBox(
+                          height: 50,
+                          width: 250,
+                          child: DefaultTextStyle(
+                            style: GoogleFonts.spaceGrotesk(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 11,
+                            ),
+                            child: AnimatedTextKit(
+                              animatedTexts: [
+                                TypewriterAnimatedText(
+                                  textAlign: TextAlign.center,
+                                  '"If you`re going to do something new or innovative, you have to be willing to accept misconceptions."',
+                                  speed: const Duration(milliseconds: 150),
+                                ),
+                              ],
+                              pause: const Duration(seconds: 15),
+                              displayFullTextOnTap: true,
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 // text client, project - bagian kanan
@@ -251,7 +245,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              Container(
+                              SizedBox(
                                 child: Column(
                                   children: [
                                     Text("10+",
@@ -275,7 +269,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                               const SizedBox(
                                 height: 25.0,
                               ),
-                              Container(
+                              SizedBox(
                                 child: Column(
                                   children: [
                                     Text("99%",
@@ -299,7 +293,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                               const SizedBox(
                                 height: 25.0,
                               ),
-                              Container(
+                              SizedBox(
                                 child: Column(
                                   children: [
                                     Text("95%",

@@ -34,7 +34,7 @@ class _LargeCertificateScreenState extends State<LargeCertificateScreen> {
   Widget build(BuildContext context) {
     // ignore: sized_box_for_whitespace
     return Container(
-      height: 800,
+      height: 575,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 60),
         child: Column(
@@ -72,7 +72,7 @@ class _LargeCertificateScreenState extends State<LargeCertificateScreen> {
                 const SizedBox(
                   height: 5.0,
                 ),
-                Container(
+                SizedBox(
                   height: 400,
                   width: MediaQuery.of(context).size.width,
                   child: GridView.builder(
@@ -89,7 +89,7 @@ class _LargeCertificateScreenState extends State<LargeCertificateScreen> {
                             listCertificate()[index].linkCertificate;
                         return FadeInDown(
                           duration: const Duration(milliseconds: 2500),
-                          child: Container(
+                          child: SizedBox(
                             height: 50,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,

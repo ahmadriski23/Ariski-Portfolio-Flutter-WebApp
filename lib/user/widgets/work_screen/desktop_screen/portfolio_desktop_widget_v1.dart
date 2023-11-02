@@ -47,7 +47,7 @@ class _PortfolioDesktopWidgetVolume1State
               var appName = listPortfolioV1()[index].appName!;
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                child: Container(
+                child: SizedBox(
                   width: size.width,
                   height: 600,
                   child: Stack(

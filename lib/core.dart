@@ -23,9 +23,6 @@ export 'package:ariski_portfolio/user/screens/certificate_screen.dart/mobile_cer
 export 'package:ariski_portfolio/user/screens/certificate_screen.dart/tablet_certificate_screen.dart';
 export 'package:ariski_portfolio/user/screens/experience_screen/desktop_experience_screen.dart';
 export 'package:ariski_portfolio/user/screens/experience_screen/experience_screen.dart';
-export 'package:ariski_portfolio/user/screens/experience_screen/large_experience_screen.dart';
-export 'package:ariski_portfolio/user/screens/experience_screen/mobile_experience_screen.dart';
-export 'package:ariski_portfolio/user/screens/experience_screen/tablet_experience_screen.dart';
 export 'package:ariski_portfolio/user/screens/home_screen/desktop_home_screen.dart';
 export 'package:ariski_portfolio/user/screens/home_screen/home_screen.dart';
 export 'package:ariski_portfolio/user/screens/home_screen/large_home_screen.dart';

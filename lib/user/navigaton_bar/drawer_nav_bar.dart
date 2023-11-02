@@ -39,7 +39,7 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
       sectionHeight = 595.0;
     } else if (screenSize.width >= 720 == screenSize.width < 1000) {
       // Perangkat Tablet
-      sectionHeight = 525.0;
+      sectionHeight = 475.0;
     } else if (screenSize.width >= 1000 == screenSize.width < 1350) {
       // Perangkat Desktop
       sectionHeight = 515.0;
@@ -242,7 +242,7 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
                 height: 20.0,
               ),
               // list nama drawer
-              Container(
+              SizedBox(
                 height: 250,
                 child: ListView.builder(
                   scrollDirection: Axis.vertical,

@@ -20,7 +20,7 @@ class _TabletWorkScreenState extends State<TabletWorkScreen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
-      child: Container(
+      child: SizedBox(
           height: 900,
           child: Column(
             children: [
@@ -44,7 +44,7 @@ class _TabletWorkScreenState extends State<TabletWorkScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 50),
-                child: Container(
+                child: SizedBox(
                   height: 550,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -69,12 +69,12 @@ class _TabletWorkScreenState extends State<TabletWorkScreen> {
                                     fontSize: 12,
                                   ),
                               indicatorSize: TabBarIndicatorSize.label,
-                              tabs: [
-                                const Tab(text: 'Mobile Apps V1'),
-                                const Tab(
+                              tabs: const [
+                                Tab(text: 'Mobile Apps V1'),
+                                Tab(
                                   text: 'Mobile Apps V2',
                                 ),
-                                const Tab(
+                                Tab(
                                   text: 'Mobile Apps V3',
                                 ),
                               ]),

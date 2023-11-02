@@ -44,8 +44,8 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: 800,
+    return SizedBox(
+        height: 675,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 25),
           child: Column(
@@ -113,7 +113,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                       children: [
                         FadeInDown(
                           duration: const Duration(milliseconds: 1400),
-                          child: Container(
+                          child: SizedBox(
                             child: Text(
                               'Ahmad Riski,',
                               style: GoogleFonts.rowdies(
@@ -127,7 +127,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                         ),
                         FadeInDown(
                           duration: const Duration(milliseconds: 1900),
-                          child: Container(
+                          child: SizedBox(
                             child: Text(
                               'Based in Bandung, Indonesia, I am a Flutter Developer and Full Stack Developer with over 1 years experience develop website and apps.',
                               style: GoogleFonts.roboto(
@@ -159,7 +159,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                     },
                     child: FadeInDown(
                       duration: const Duration(milliseconds: 1900),
-                      child: Container(
+                      child: SizedBox(
                         height: 35,
                         width: 120,
                         child: ElevatedButton(
@@ -192,14 +192,14 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                     210,
                     0,
                   ),
-                  child: Container(
+                  child: SizedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         FadeInDown(
                           duration: const Duration(milliseconds: 2400),
-                          child: Container(
+                          child: SizedBox(
                             height: 100,
                             width: 325,
                             child: DefaultTextStyle(
@@ -243,7 +243,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              Container(
+                              SizedBox(
                                 child: Column(
                                   children: [
                                     Text("10+",
@@ -267,7 +267,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                               const SizedBox(
                                 height: 25.0,
                               ),
-                              Container(
+                              SizedBox(
                                 child: Column(
                                   children: [
                                     Text("99%",
@@ -291,7 +291,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
                               const SizedBox(
                                 height: 25.0,
                               ),
-                              Container(
+                              SizedBox(
                                 child: Column(
                                   children: [
                                     Text("95%",
