@@ -242,7 +242,7 @@ class _DrawerNavbarMobileTabletState extends State<DrawerNavbarMobileTablet> {
                 height: 20.0,
               ),
               // list nama drawer
-              Container(
+              SizedBox(
                 height: 250,
                 child: ListView.builder(
                   scrollDirection: Axis.vertical,

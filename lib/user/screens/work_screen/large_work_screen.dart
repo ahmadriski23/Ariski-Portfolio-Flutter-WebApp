@@ -21,7 +21,7 @@ class _LargeWorkScreenState extends State<LargeWorkScreen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
-      child: Container(
+      child: SizedBox(
           height: 1200,
           child: Column(
             children: [
@@ -45,7 +45,7 @@ class _LargeWorkScreenState extends State<LargeWorkScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 50),
-                child: Container(
+                child: SizedBox(
                   height: 650,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -70,12 +70,12 @@ class _LargeWorkScreenState extends State<LargeWorkScreen> {
                                     fontSize: 14,
                                   ),
                               indicatorSize: TabBarIndicatorSize.label,
-                              tabs: [
-                                const Tab(text: 'Mobile Apps V1'),
-                                const Tab(
+                              tabs: const [
+                                Tab(text: 'Mobile Apps V1'),
+                                Tab(
                                   text: 'Mobile Apps V2',
                                 ),
-                                const Tab(
+                                Tab(
                                   text: 'Mobile Apps V3',
                                 ),
                               ]),

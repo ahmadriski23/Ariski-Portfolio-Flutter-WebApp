@@ -14,13 +14,13 @@ class DesktopTechstackScreen extends StatefulWidget {
 class _DesktopTechstackScreenState extends State<DesktopTechstackScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 400,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 60),
         child: Column(
           children: [
-            Container(
+            SizedBox(
               child: Column(children: [
                 FadeInDown(
                   duration: const Duration(milliseconds: 2500),
@@ -36,11 +36,12 @@ class _DesktopTechstackScreenState extends State<DesktopTechstackScreen> {
                 const SizedBox(
                   height: 35.0,
                 ),
-                Container(
+                SizedBox(
                   height: 250,
                   child: GridView.builder(
                       itemCount: listTechstack().length,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         childAspectRatio: 16 / 9,
                         crossAxisCount: 6,
                         mainAxisSpacing: 25,
@@ -55,7 +56,7 @@ class _DesktopTechstackScreenState extends State<DesktopTechstackScreen> {
                             height: 85,
                             width: 175,
                             decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     offset: Offset(1, 3),
                                     color: Colors.grey,
@@ -63,7 +64,8 @@ class _DesktopTechstackScreenState extends State<DesktopTechstackScreen> {
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 248, 247, 247)),
+                                color:
+                                    const Color.fromARGB(255, 248, 247, 247)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,

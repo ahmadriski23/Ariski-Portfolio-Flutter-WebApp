@@ -73,11 +73,11 @@ class _MobileCertificateScreenState extends State<MobileCertificateScreen> {
                 const SizedBox(
                   height: 5.0,
                 ),
-                Container(
+                SizedBox(
                   height: 700,
                   width: MediaQuery.of(context).size.width,
                   child: ListView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: listCertificate().length,
                       itemBuilder: (context, index) {
                         var title = listCertificate()[index].title;
@@ -87,8 +87,8 @@ class _MobileCertificateScreenState extends State<MobileCertificateScreen> {
                         return FadeInDown(
                           duration: const Duration(milliseconds: 2500),
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                            child: Container(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                            child: SizedBox(
                               height: 50,
                               child: Column(
                                 children: [

@@ -44,7 +44,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 655,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
@@ -104,7 +104,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                   child: Container(
                     height: 50,
                     width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(boxShadow: [
+                    decoration: const BoxDecoration(boxShadow: [
                       BoxShadow(
                         color: Colors.black,
                         spreadRadius: 5,
@@ -128,7 +128,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                       children: [
                         FadeInDown(
                           duration: const Duration(milliseconds: 1400),
-                          child: Container(
+                          child: SizedBox(
                             child: Text(
                               'Ahmad Riski,',
                               style: GoogleFonts.rowdies(
@@ -145,7 +145,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                         ),
                         FadeInDown(
                           duration: const Duration(milliseconds: 1900),
-                          child: Container(
+                          child: SizedBox(
                             child: Text(
                               'Based in Bandung, Indonesia, I am a Flutter Developer and Full Stack Developer with over 1 years experience develop website and apps.',
                               style: GoogleFonts.roboto(
@@ -177,7 +177,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                     },
                     child: FadeInDown(
                       duration: const Duration(milliseconds: 1900),
-                      child: Container(
+                      child: SizedBox(
                         height: 30,
                         width: 90,
                         child: ElevatedButton(
@@ -203,7 +203,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                   ),
                 ),
                 // text quotes di kanan
-                Container(
+                SizedBox(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(
                       25,
@@ -217,7 +217,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                       children: [
                         FadeInDown(
                           duration: const Duration(milliseconds: 2400),
-                          child: Container(
+                          child: SizedBox(
                             height: 50,
                             width: 250,
                             child: DefaultTextStyle(
@@ -261,7 +261,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 child: Column(
                                   children: [
                                     Text("10+",
@@ -288,7 +288,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                               const SizedBox(
                                 width: 25.0,
                               ),
-                              Container(
+                              SizedBox(
                                 child: Column(
                                   children: [
                                     Text("99%",
@@ -315,7 +315,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                               const SizedBox(
                                 width: 25.0,
                               ),
-                              Container(
+                              SizedBox(
                                 child: Column(
                                   children: [
                                     Text("95%",

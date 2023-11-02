@@ -1,10 +1,12 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 class HoverWidget extends StatefulWidget {
   final Function(bool isHovered) onHover;
   final Widget child;
 
-  HoverWidget({required this.onHover, required this.child});
+  const HoverWidget({super.key, required this.onHover, required this.child});
 
   @override
   _HoverWidgetState createState() => _HoverWidgetState();

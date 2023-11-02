@@ -20,7 +20,7 @@ class _MobileWorkScreenState extends State<MobileWorkScreen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
-      child: Container(
+      child: SizedBox(
           height: 1300,
           child: Column(
             children: [
@@ -44,7 +44,7 @@ class _MobileWorkScreenState extends State<MobileWorkScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 50),
-                child: Container(
+                child: SizedBox(
                   height: 1000,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

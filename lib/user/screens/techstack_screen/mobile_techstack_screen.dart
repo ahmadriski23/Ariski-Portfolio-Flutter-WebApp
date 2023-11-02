@@ -14,13 +14,13 @@ class MobileTechstackScreen extends StatefulWidget {
 class _MobileTechstackScreenState extends State<MobileTechstackScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 675,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Column(
           children: [
-            Container(
+            SizedBox(
               child: Column(children: [
                 FadeInDown(
                   duration: const Duration(milliseconds: 2500),
@@ -36,12 +36,13 @@ class _MobileTechstackScreenState extends State<MobileTechstackScreen> {
                 const SizedBox(
                   height: 35.0,
                 ),
-                Container(
+                SizedBox(
                   height: 600,
                   child: GridView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: listTechstack().length,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         childAspectRatio: 13 / 6,
                         crossAxisCount: 2,
                         mainAxisSpacing: 25,
@@ -56,7 +57,7 @@ class _MobileTechstackScreenState extends State<MobileTechstackScreen> {
                             height: 85,
                             width: 175,
                             decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     offset: Offset(1, 3),
                                     color: Colors.grey,
@@ -64,7 +65,8 @@ class _MobileTechstackScreenState extends State<MobileTechstackScreen> {
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 248, 247, 247)),
+                                color:
+                                    const Color.fromARGB(255, 248, 247, 247)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,

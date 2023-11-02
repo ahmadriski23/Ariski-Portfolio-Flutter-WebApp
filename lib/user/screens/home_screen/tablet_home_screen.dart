@@ -44,7 +44,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 525,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 25),
@@ -113,7 +113,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                       children: [
                         FadeInDown(
                           duration: const Duration(milliseconds: 1400),
-                          child: Container(
+                          child: SizedBox(
                             child: Text(
                               'Ahmad Riski,',
                               style: GoogleFonts.rowdies(
@@ -130,7 +130,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                         ),
                         FadeInDown(
                           duration: const Duration(milliseconds: 1900),
-                          child: Container(
+                          child: SizedBox(
                             child: Text(
                               'Based in Bandung, Indonesia, I am a Flutter Developer and Full Stack Developer with over 1 years experience develop website and apps.',
                               style: GoogleFonts.roboto(
@@ -162,7 +162,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                     },
                     child: FadeInDown(
                       duration: const Duration(milliseconds: 1900),
-                      child: Container(
+                      child: SizedBox(
                         height: 35,
                         width: 105,
                         child: ElevatedButton(
@@ -195,14 +195,14 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                     80,
                     0,
                   ),
-                  child: Container(
+                  child: SizedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         FadeInDown(
                           duration: const Duration(milliseconds: 2400),
-                          child: Container(
+                          child: SizedBox(
                             height: 50,
                             width: 250,
                             child: DefaultTextStyle(
@@ -246,7 +246,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              Container(
+                              SizedBox(
                                 child: Row(
                                   children: [
                                     Text("10+",
@@ -270,7 +270,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                               const SizedBox(
                                 width: 25.0,
                               ),
-                              Container(
+                              SizedBox(
                                 child: Row(
                                   children: [
                                     Text("99%",
@@ -294,7 +294,7 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                               const SizedBox(
                                 width: 25.0,
                               ),
-                              Container(
+                              SizedBox(
                                 child: Row(
                                   children: [
                                     Text("95%",

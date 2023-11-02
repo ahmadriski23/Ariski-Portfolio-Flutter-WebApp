@@ -5,7 +5,6 @@ import 'package:ariski_portfolio/user/screens/experience_screen/experience_scree
 import 'package:ariski_portfolio/user/screens/techstack_screen/techstack_screen.dart';
 import 'package:ariski_portfolio/user/screens/work_screen/work_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/color.dart';

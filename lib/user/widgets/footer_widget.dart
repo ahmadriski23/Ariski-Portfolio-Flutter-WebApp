@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:developer';
 
 import 'package:animate_do/animate_do.dart';
@@ -211,7 +213,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                 children: [
                   FadeInLeft(
                     duration: const Duration(seconds: 5),
-                    child: Container(
+                    child: SizedBox(
                       height: 35,
                       width: 120,
                       child: OutlinedButton(

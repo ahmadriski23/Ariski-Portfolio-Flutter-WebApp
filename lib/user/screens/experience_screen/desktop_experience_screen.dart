@@ -71,177 +71,187 @@ class _DesktopExperienceScreenState extends State<DesktopExperienceScreen> {
                         var location = listExperience()[index].location;
                         var company = listExperience()[index].company;
                         var link = listExperience()[index].link;
-                        return Container(
-                          height: 170,
-                          width: 450,
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                offset: const Offset(1, 2),
-                                color: Colors.grey.shade800,
-                                blurRadius: 9,
-                              )
-                            ],
-                            border: Border.all(width: 1, color: Colors.grey),
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(12, 16, 12, 16),
-                            child: Row(
-                              children: [
-                                SizedBox(
-                                  width: 100,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        height: 85,
-                                        width: 85,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            fit: BoxFit.cover,
-                                            image: AssetImage('$image'),
+                        return FadeInDown(
+                          duration: const Duration(milliseconds: 2500),
+                          child: Container(
+                            height: 170,
+                            width: 450,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: const Offset(1, 2),
+                                  color: Colors.grey.shade800,
+                                  blurRadius: 9,
+                                )
+                              ],
+                              border: Border.all(width: 1, color: Colors.grey),
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.fromLTRB(12, 16, 12, 16),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: 100,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          height: 85,
+                                          width: 85,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: AssetImage('$image'),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(
-                                  width: 8.0,
-                                ),
-                                SizedBox(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        job!,
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 18,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      const SizedBox(
-                                        height: 5.0,
-                                      ),
-                                      Row(
-                                        children: [
-                                          MouseRegion(
-                                              onEnter: (_) {
-                                                setState(
-                                                  () {
-                                                    isHoveredList[index] = true;
-                                                  },
-                                                );
-                                              },
-                                              onExit: (_) {
-                                                setState(() {
-                                                  isHoveredList[index] = false;
-                                                });
-                                              },
-                                              child: InkWell(
-                                                onTap: () {
-                                                  linkCompanyUrl(link!);
+                                  const SizedBox(
+                                    width: 8.0,
+                                  ),
+                                  SizedBox(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          job!,
+                                          style: GoogleFonts.poppins(
+                                              fontSize: 18,
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        const SizedBox(
+                                          height: 5.0,
+                                        ),
+                                        Row(
+                                          children: [
+                                            MouseRegion(
+                                                onEnter: (_) {
+                                                  setState(
+                                                    () {
+                                                      isHoveredList[index] =
+                                                          true;
+                                                    },
+                                                  );
                                                 },
-                                                child: isHoveredList[index]
-                                                    ? AnimatedContainer(
-                                                        duration:
-                                                            const Duration(
-                                                                milliseconds:
-                                                                    500),
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          color: Colors
-                                                              .grey.shade400,
-                                                        ),
-                                                        child: Text(
+                                                onExit: (_) {
+                                                  setState(() {
+                                                    isHoveredList[index] =
+                                                        false;
+                                                  });
+                                                },
+                                                child: InkWell(
+                                                  onTap: () {
+                                                    linkCompanyUrl(link!);
+                                                  },
+                                                  child: isHoveredList[index]
+                                                      ? AnimatedContainer(
+                                                          duration:
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      500),
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        5),
+                                                            color: Colors
+                                                                .grey.shade400,
+                                                          ),
+                                                          child: Text(
+                                                            company!,
+                                                            style: GoogleFonts
+                                                                .poppins(
+                                                                    fontSize:
+                                                                        15,
+                                                                    color: Colors
+                                                                        .black),
+                                                          ),
+                                                        )
+                                                      : Text(
                                                           company!,
                                                           style: GoogleFonts
                                                               .poppins(
-                                                                  fontSize: 15,
-                                                                  color: Colors
-                                                                      .black),
+                                                            decoration:
+                                                                TextDecoration
+                                                                    .underline,
+                                                            fontSize: 15,
+                                                            color: Colors
+                                                                .grey.shade800,
+                                                          ),
                                                         ),
-                                                      )
-                                                    : Text(
-                                                        company!,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          decoration:
-                                                              TextDecoration
-                                                                  .underline,
-                                                          fontSize: 15,
-                                                          color: Colors
-                                                              .grey.shade800,
-                                                        ),
-                                                      ),
-                                              )),
-                                          const SizedBox(
-                                            width: 8.0,
-                                          ),
-                                          Text(
-                                            '•',
-                                            style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.grey.shade500,
+                                                )),
+                                            const SizedBox(
+                                              width: 8.0,
                                             ),
-                                          ),
-                                          const SizedBox(
-                                            width: 8.0,
-                                          ),
-                                          Text(
-                                            location!,
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 15,
-                                              color: Colors.grey.shade800,
+                                            Text(
+                                              '•',
+                                              style: TextStyle(
+                                                fontSize: 15,
+                                                color: Colors.grey.shade500,
+                                              ),
                                             ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 8.0,
-                                      ),
-                                      Text(
-                                        date!,
-                                        style: GoogleFonts.poppins(
-                                          fontSize: 13,
-                                          color: Colors.grey.shade800,
+                                            const SizedBox(
+                                              width: 8.0,
+                                            ),
+                                            Text(
+                                              location!,
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 15,
+                                                color: Colors.grey.shade800,
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                      ),
-                                      const SizedBox(
-                                        height: 4.0,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            '~',
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 13,
-                                              color: Colors.grey.shade800,
+                                        const SizedBox(
+                                          height: 8.0,
+                                        ),
+                                        Text(
+                                          date!,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 13,
+                                            color: Colors.grey.shade800,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 4.0,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              '~',
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 13,
+                                                color: Colors.grey.shade800,
+                                              ),
                                             ),
-                                          ),
-                                          const SizedBox(
-                                            width: 5.0,
-                                          ),
-                                          Text(
-                                            duration!,
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 13,
-                                              color: Colors.grey.shade800,
+                                            const SizedBox(
+                                              width: 5.0,
                                             ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              ],
+                                            Text(
+                                              duration!,
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 13,
+                                                color: Colors.grey.shade800,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         );

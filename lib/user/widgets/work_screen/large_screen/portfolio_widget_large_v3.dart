@@ -43,7 +43,7 @@ class _PortfolioLargeWidgetVolume3State
             var appName = listPortfolioV3()[index].appName!;
             return Padding(
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-              child: Container(
+              child: SizedBox(
                 width: size.width,
                 height: 550,
                 child: Stack(

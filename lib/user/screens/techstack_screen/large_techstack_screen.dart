@@ -20,7 +20,7 @@ class _LargeTechstackScreenState extends State<LargeTechstackScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 60),
         child: Column(
           children: [
-            Container(
+            SizedBox(
               child: Column(children: [
                 FadeInDown(
                   duration: const Duration(milliseconds: 2500),
@@ -56,8 +56,8 @@ class _LargeTechstackScreenState extends State<LargeTechstackScreen> {
                             height: 85,
                             width: 175,
                             decoration: BoxDecoration(
-                                boxShadow: [
-                                  const BoxShadow(
+                                boxShadow: const [
+                                  BoxShadow(
                                     offset: Offset(1, 3),
                                     color: Colors.grey,
                                     blurRadius: 5,
