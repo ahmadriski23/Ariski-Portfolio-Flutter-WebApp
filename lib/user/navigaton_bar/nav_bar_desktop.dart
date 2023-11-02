@@ -33,13 +33,13 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
       sectionHeight = 400.0;
     } else if (screenSize.width >= 720 == screenSize.width < 1000) {
       // Perangkat Tablet
-      sectionHeight = 450.0;
+      sectionHeight = 300.0;
     } else if (screenSize.width >= 1000 == screenSize.width < 1350) {
       // Perangkat Desktop
-      sectionHeight = 515.0;
+      sectionHeight = 460.0;
     } else {
       // Perangkat Besar
-      sectionHeight = 800.0;
+      sectionHeight = 525.0;
     }
 
     _scrollController.animateTo(index * sectionHeight,

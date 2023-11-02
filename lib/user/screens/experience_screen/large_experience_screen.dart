@@ -1,8 +1,10 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:animate_do/animate_do.dart';
 import 'package:ariski_portfolio/core.dart';
-import 'package:ariski_portfolio/data/list/experience/list_experience.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LargeExperienceScreen extends StatefulWidget {
   const LargeExperienceScreen({super.key});
@@ -11,11 +13,25 @@ class LargeExperienceScreen extends StatefulWidget {
   State<LargeExperienceScreen> createState() => _LargeExperienceScreenState();
 }
 
+// * METHOD FOR TO LINK CERTIFICATE
+Future<void> linkCompanyUrl(String url) async {
+  url = url;
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+// * METHOD AGAR HOVER BUTTON LINK SATU PER SATU
+List<bool> isHoveredList =
+    List.generate(listExperience().length, (index) => false);
+
 class _LargeExperienceScreenState extends State<LargeExperienceScreen> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 800,
+        height: 400,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
           child: Column(
@@ -37,7 +53,7 @@ class _LargeExperienceScreenState extends State<LargeExperienceScreen> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(250, 0, 250, 0),
                 child: SizedBox(
-                  height: 500,
+                  height: 250,
                   child: GridView.builder(
                       itemCount: listExperience().length,
                       gridDelegate:
@@ -53,13 +69,14 @@ class _LargeExperienceScreenState extends State<LargeExperienceScreen> {
                         var duration = listExperience()[index].duration;
                         var location = listExperience()[index].location;
                         var company = listExperience()[index].company;
+                        var link = listExperience()[index].link;
                         return Container(
                           height: 170,
                           width: 450,
                           decoration: BoxDecoration(
                             boxShadow: [
                               BoxShadow(
-                                offset: Offset(1, 2),
+                                offset: const Offset(1, 2),
                                 color: Colors.grey.shade800,
                                 blurRadius: 9,
                               )
@@ -111,13 +128,57 @@ class _LargeExperienceScreenState extends State<LargeExperienceScreen> {
                                       ),
                                       Row(
                                         children: [
-                                          Text(
-                                            company!,
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 15,
-                                              color: Colors.grey.shade800,
-                                            ),
-                                          ),
+                                          MouseRegion(
+                                              onEnter: (_) {
+                                                setState(
+                                                  () {
+                                                    isHoveredList[index] = true;
+                                                  },
+                                                );
+                                              },
+                                              onExit: (_) {
+                                                setState(() {
+                                                  isHoveredList[index] = false;
+                                                });
+                                              },
+                                              child: InkWell(
+                                                onTap: () {
+                                                  linkCompanyUrl(link!);
+                                                },
+                                                child: isHoveredList[index]
+                                                    ? AnimatedContainer(
+                                                        duration: Duration(
+                                                            milliseconds: 500),
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(5),
+                                                          color: Colors
+                                                              .grey.shade400,
+                                                        ),
+                                                        child: Text(
+                                                          company!,
+                                                          style: GoogleFonts
+                                                              .poppins(
+                                                                  fontSize: 15,
+                                                                  color: Colors
+                                                                      .black),
+                                                        ),
+                                                      )
+                                                    : Text(
+                                                        company!,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          decoration:
+                                                              TextDecoration
+                                                                  .underline,
+                                                          fontSize: 15,
+                                                          color: Colors
+                                                              .grey.shade800,
+                                                        ),
+                                                      ),
+                                              )),
                                           const SizedBox(
                                             width: 8.0,
                                           ),

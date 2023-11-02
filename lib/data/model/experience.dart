@@ -6,4 +6,5 @@ class Experience {
   String? duration;
   String? location;
   String? image;
+  String? link;
 }

@@ -1,7 +1,11 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:animate_do/animate_do.dart';
-import 'package:ariski_portfolio/data/list/experience/list_experience.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../../../data/list/experience/list_experience.dart';
 
 class TabletExperienceScreen extends StatefulWidget {
   const TabletExperienceScreen({super.key});
@@ -9,12 +13,26 @@ class TabletExperienceScreen extends StatefulWidget {
   @override
   State<TabletExperienceScreen> createState() => _TabletExperienceScreenState();
 }
+// * METHOD FOR TO LINK CERTIFICATE
+
+Future<void> linkCompanyUrl(String url) async {
+  url = url;
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+// * METHOD AGAR HOVER BUTTON LINK SATU PER SATU
+List<bool> isHoveredList =
+    List.generate(listExperience().length, (index) => false);
 
 class _TabletExperienceScreenState extends State<TabletExperienceScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 525,
+        height: 350,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Column(
@@ -34,17 +52,17 @@ class _TabletExperienceScreenState extends State<TabletExperienceScreen> {
                 height: 35.0,
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(250, 0, 250, 0),
+                padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                 child: SizedBox(
-                  height: 500,
+                  height: 285,
                   child: GridView.builder(
                       itemCount: listExperience().length,
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
-                              mainAxisSpacing: 22,
-                              crossAxisSpacing: 22,
-                              childAspectRatio: 27 / 9),
+                              mainAxisSpacing: 20,
+                              crossAxisSpacing: 20,
+                              childAspectRatio: 31 / 14),
                       itemBuilder: (context, index) {
                         var job = listExperience()[index].job;
                         var image = listExperience()[index].image;
@@ -52,13 +70,14 @@ class _TabletExperienceScreenState extends State<TabletExperienceScreen> {
                         var duration = listExperience()[index].duration;
                         var location = listExperience()[index].location;
                         var company = listExperience()[index].company;
+                        var link = listExperience()[index].link;
                         return Container(
                           height: 170,
                           width: 450,
                           decoration: BoxDecoration(
                             boxShadow: [
                               BoxShadow(
-                                offset: Offset(1, 2),
+                                offset: const Offset(1, 2),
                                 color: Colors.grey.shade800,
                                 blurRadius: 9,
                               )
@@ -68,40 +87,35 @@ class _TabletExperienceScreenState extends State<TabletExperienceScreen> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(12, 16, 12, 16),
+                            padding: const EdgeInsets.fromLTRB(4, 8, 4, 8),
                             child: Row(
                               children: [
                                 SizedBox(
-                                  width: 100,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        height: 85,
-                                        width: 85,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            fit: BoxFit.cover,
-                                            image: AssetImage('$image'),
-                                          ),
-                                        ),
+                                  width: 65,
+                                  child: Container(
+                                    height: 65,
+                                    width: 65,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage('$image'),
                                       ),
-                                    ],
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
-                                  width: 8.0,
+                                  width: 4.0,
                                 ),
                                 SizedBox(
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         job!,
                                         style: GoogleFonts.poppins(
-                                            fontSize: 18,
+                                            fontSize: 16,
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold),
                                       ),
@@ -110,13 +124,59 @@ class _TabletExperienceScreenState extends State<TabletExperienceScreen> {
                                       ),
                                       Row(
                                         children: [
-                                          Text(
-                                            company!,
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 15,
-                                              color: Colors.grey.shade800,
-                                            ),
-                                          ),
+                                          MouseRegion(
+                                              onEnter: (_) {
+                                                setState(
+                                                  () {
+                                                    isHoveredList[index] = true;
+                                                  },
+                                                );
+                                              },
+                                              onExit: (_) {
+                                                setState(() {
+                                                  isHoveredList[index] = false;
+                                                });
+                                              },
+                                              child: InkWell(
+                                                onTap: () {
+                                                  linkCompanyUrl(link!);
+                                                },
+                                                child: isHoveredList[index]
+                                                    ? AnimatedContainer(
+                                                        duration:
+                                                            const Duration(
+                                                                milliseconds:
+                                                                    500),
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(5),
+                                                          color: Colors
+                                                              .grey.shade400,
+                                                        ),
+                                                        child: Text(
+                                                          company!,
+                                                          style: GoogleFonts
+                                                              .poppins(
+                                                                  fontSize: 13,
+                                                                  color: Colors
+                                                                      .black),
+                                                        ),
+                                                      )
+                                                    : Text(
+                                                        company!,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          decoration:
+                                                              TextDecoration
+                                                                  .underline,
+                                                          fontSize: 13,
+                                                          color: Colors
+                                                              .grey.shade800,
+                                                        ),
+                                                      ),
+                                              )),
                                           const SizedBox(
                                             width: 8.0,
                                           ),

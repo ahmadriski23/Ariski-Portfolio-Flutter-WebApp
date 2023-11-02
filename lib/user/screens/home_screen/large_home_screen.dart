@@ -45,7 +45,7 @@ class _LargeHomeScreenState extends State<LargeHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 800,
+        height: 675,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 25),
           child: Column(

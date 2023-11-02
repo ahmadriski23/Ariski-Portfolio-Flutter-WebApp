@@ -9,6 +9,7 @@ List<Experience> listExperience() {
   experience1.duration = '6 Month';
   experience1.location = 'Bandung';
   experience1.image = 'assets/images/experiences/saptaloka.png';
+  experience1.link = 'https://saptalokadigital.com';
 
   Experience experience2 = Experience();
   experience2.date = 'July 2022 - December 2022';
@@ -17,6 +18,7 @@ List<Experience> listExperience() {
   experience2.duration = '6 Month';
   experience2.location = 'Bandung';
   experience2.image = 'assets/images/experiences/saptaloka.png';
+  experience2.link = 'https://saptalokadigital.com';
 
   return [experience1, experience2];
 }

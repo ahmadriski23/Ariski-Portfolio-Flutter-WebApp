@@ -34,7 +34,7 @@ class _LargeCertificateScreenState extends State<LargeCertificateScreen> {
   Widget build(BuildContext context) {
     // ignore: sized_box_for_whitespace
     return Container(
-      height: 800,
+      height: 575,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 60),
         child: Column(

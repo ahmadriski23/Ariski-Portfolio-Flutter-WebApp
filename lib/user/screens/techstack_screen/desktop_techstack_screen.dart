@@ -15,7 +15,7 @@ class _DesktopTechstackScreenState extends State<DesktopTechstackScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 526,
+      height: 400,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 60),
         child: Column(
@@ -37,7 +37,7 @@ class _DesktopTechstackScreenState extends State<DesktopTechstackScreen> {
                   height: 35.0,
                 ),
                 Container(
-                  height: 300,
+                  height: 250,
                   child: GridView.builder(
                       itemCount: listTechstack().length,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

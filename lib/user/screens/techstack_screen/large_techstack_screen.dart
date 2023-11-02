@@ -15,7 +15,7 @@ class _LargeTechstackScreenState extends State<LargeTechstackScreen> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 800,
+      height: 450,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 60),
         child: Column(
@@ -37,7 +37,7 @@ class _LargeTechstackScreenState extends State<LargeTechstackScreen> {
                   height: 35.0,
                 ),
                 SizedBox(
-                  height: 500,
+                  height: 275,
                   child: GridView.builder(
                       itemCount: listTechstack().length,
                       gridDelegate:
