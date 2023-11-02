@@ -14,7 +14,7 @@ A Portfolio Web- Works on Web & Android!
 
 ## Pictures
 <p align="center">
-  <img width="1000" src="https://github.com/ahmadriski23/Ariski-Portfolio-Flutter/blob/main/ScreenshotPorto.png" alt="Youtube Tutorial Image">
+  <img width="1000" src="assets/images/ScreenshotPorto.png" alt="Youtube Tutorial Image">
 </p>
 
 
